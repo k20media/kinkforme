@@ -1,0 +1,34 @@
+name: Deploy to Digital Ocean droplet
+
+on:
+  workflow_run:
+    workflows: ["Build & lint project"]
+    types:
+      - completed
+jobs:
+  deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy to droplet using SSH
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        debug: true
+        script: |
+          cd ${{ secrets.DOCROOT }}
+          git pull
+
+          # Drupal-specific commands
+          rm -rf vendor
+          composer install
+          ./vendor/bin/drush cr
+          ./vendor/bin/drush config:import -y
+          ./vendor/bin/drush import-all -y
+          ./vendor/bin/drush updatedb -y
+          ./vendor/bin/drush cr
