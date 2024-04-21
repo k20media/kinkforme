@@ -28,6 +28,8 @@ jobs:
           ./vendor/bin/drush import-all -y
           ./vendor/bin/drush updatedb -y
           ./vendor/bin/drush cr
+          # Remove .ddev folder
+          rm -rf .ddev
     - name: Adjust ownership and permissions
       uses: appleboy/ssh-action@master
       with:
