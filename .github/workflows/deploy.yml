@@ -1,5 +1,4 @@
 name: Deploy to Digital Ocean droplet
-
 on:
   workflow_run:
     workflows: ["Build & lint project"]
@@ -12,7 +11,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
     - name: Deploy to droplet using SSH
       uses: appleboy/ssh-action@master
       with:
@@ -23,12 +21,19 @@ jobs:
         script: |
           cd ${{ secrets.DOCROOT }}
           git pull
-
-          # Drupal-specific commands
-          rm -rf vendor
           composer install
+          # Drupal-specific commands
           ./vendor/bin/drush cr
           ./vendor/bin/drush config:import -y
           ./vendor/bin/drush import-all -y
           ./vendor/bin/drush updatedb -y
           ./vendor/bin/drush cr
+    - name: Adjust ownership and permissions
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          sudo chown -R www-data:www-data ${{ secrets.DOCROOT }}
+          sudo chmod -R 755 ${{ secrets.DOCROOT }}
