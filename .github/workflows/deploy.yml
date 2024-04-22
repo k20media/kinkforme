@@ -22,16 +22,16 @@ jobs:
           debug: true
           script: |
             cd ${{ secrets.DOCROOT }}
-            git pull
-            composer install
+            sudo git pull
+            sudo composer install
             # Drupal-specific commands
-            ./vendor/bin/drush cr
-            ./vendor/bin/drush config:import -y
-            ./vendor/bin/drush import-all -y
-            ./vendor/bin/drush updatedb -y
-            ./vendor/bin/drush cr
+            sudo ./vendor/bin/drush cr
+            sudo ./vendor/bin/drush config:import -y
+            sudo ./vendor/bin/drush import-all -y
+            sudo ./vendor/bin/drush updatedb -y
+            sudo ./vendor/bin/drush cr
             # Remove .ddev folder
-            rm -rf .ddev
+            sudo rm -rf .ddev
 
       # Adjust ownership and permissions
       - name: Adjust ownership and permissions
