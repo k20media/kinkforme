@@ -1,4 +1,4 @@
-name: Deploy to Digital Ocean droplet
+name: Deploy to Digital Ocean Droplet
 on:
   workflow_run:
     workflows: ["Build & lint project"]
