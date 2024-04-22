@@ -11,7 +11,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       # Deploy and install dependencies
       - name: Deploy to droplet using SSH
         uses: appleboy/ssh-action@master
@@ -22,17 +21,14 @@ jobs:
           debug: true
           script: |
             cd ${{ secrets.DOCROOT }}
-            sudo git pull
-            sudo composer install
-            # Drupal-specific commands
-            sudo ./vendor/bin/drush cr
-            sudo ./vendor/bin/drush config:import -y
-            sudo ./vendor/bin/drush import-all -y
-            sudo ./vendor/bin/drush updatedb -y
-            sudo ./vendor/bin/drush cr
-            # Remove .ddev folder
-            sudo rm -rf .ddev
-
+            git pull
+            composer install
+            ./vendor/bin/drush cr
+            ./vendor/bin/drush config:import -y
+            ./vendor/bin/drush import-all -y
+            ./vendor/bin/drush updatedb -y
+            ./vendor/bin/drush cr
+            rm -rf .ddev
       # Adjust ownership and permissions
       - name: Adjust ownership and permissions
         uses: appleboy/ssh-action@master
