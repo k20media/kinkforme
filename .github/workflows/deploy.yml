@@ -20,6 +20,8 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           debug: true
+          env:
+            COMPOSER_ALLOW_SUPERUSER: 1
           script: |
             cd ${{ secrets.DOCROOT }}
             sudo git pull
