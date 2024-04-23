@@ -22,6 +22,7 @@
         "drupal/core-recommended": "^10.2.5",
         "drupal/gin": "^3.0@rc",
         "drupal/gin_toolbar": "^1.0@rc",
+        "drupal/paragraphs": "^1.17",
         "drush/drush": "^12.5"
     },
     "conflict": {

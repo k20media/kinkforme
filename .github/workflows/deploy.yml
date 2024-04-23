@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      # Deploy and install dependencies
+
       - name: Deploy to droplet using SSH
         uses: appleboy/ssh-action@master
         with:
@@ -36,7 +36,7 @@ jobs:
 
             # Remove files we dont want on server (but keep in repo)
             rm -rf .ddev
-      # Adjust ownership and permissions
+
       - name: Adjust ownership and permissions
         uses: appleboy/ssh-action@master
         with:
