@@ -22,6 +22,7 @@ jobs:
           script: |
             cd ${{ secrets.DOCROOT }}
             git pull
+
             composer install
             ./vendor/bin/drush cr
             ./vendor/bin/drush config:import -y
