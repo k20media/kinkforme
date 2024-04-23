@@ -23,12 +23,18 @@ jobs:
             cd ${{ secrets.DOCROOT }}
             git pull
 
+            # Build repo with composer
+            rm -rf vendor
             composer install
+
+            # Drush commands
             ./vendor/bin/drush cr
             ./vendor/bin/drush config:import -y
             # ./vendor/bin/drush import-all -y
             ./vendor/bin/drush updatedb -y
             ./vendor/bin/drush cr
+
+            # Remove files we dont want on server (but keep in repo)
             rm -rf .ddev
       # Adjust ownership and permissions
       - name: Adjust ownership and permissions
