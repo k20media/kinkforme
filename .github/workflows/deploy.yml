@@ -26,7 +26,7 @@ jobs:
             composer install
             ./vendor/bin/drush cr
             ./vendor/bin/drush config:import -y
-            ./vendor/bin/drush import-all -y
+            # ./vendor/bin/drush import-all -y
             ./vendor/bin/drush updatedb -y
             ./vendor/bin/drush cr
             rm -rf .ddev
