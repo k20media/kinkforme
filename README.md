@@ -1,3 +1,3 @@
 # kinkforme
-# deploy test - working
+# deploy test - working.
 

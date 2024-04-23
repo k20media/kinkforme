@@ -35,7 +35,7 @@ jobs:
             ./vendor/bin/drush cr
 
             # Remove files we dont want on server (but keep in repo)
-            rm -rf .ddev
+            # rm -rf .ddev
 
       - name: Adjust ownership and permissions
         uses: appleboy/ssh-action@master
