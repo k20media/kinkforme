@@ -23,9 +23,17 @@ jobs:
             cd ${{ secrets.DOCROOT }}
             git pull
 
+            # Set file mode after git pull
+            find . -type f -exec chmod 644 {} \;
+            find . -type d -exec chmod 755 {} \;
+
             # Build repo with composer
             rm -rf vendor
             composer install
+
+            # Set file mode after composer install
+            find . -type f -exec chmod 644 {} \;
+            find . -type d -exec chmod 755 {} \;
 
             # Drush commands
             ./vendor/bin/drush cr
@@ -33,9 +41,6 @@ jobs:
             # ./vendor/bin/drush import-all -y
             ./vendor/bin/drush updatedb -y
             ./vendor/bin/drush cr
-
-            # Remove files we dont want on server (but keep in repo)
-            # rm -rf .ddev
 
       - name: Adjust ownership and permissions
         uses: appleboy/ssh-action@master
