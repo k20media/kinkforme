@@ -23,17 +23,9 @@ jobs:
             cd ${{ secrets.DOCROOT }}
             git pull
 
-            # Set file mode after git pull
-            find . -type f -exec chmod 644 {} \;
-            find . -type d -exec chmod 755 {} \;
-
             # Build repo with composer
             rm -rf vendor
             composer install
-
-            # Set file mode after composer install
-            find . -type f -exec chmod 644 {} \;
-            find . -type d -exec chmod 755 {} \;
 
             # Drush commands
             ./vendor/bin/drush cr
@@ -41,7 +33,6 @@ jobs:
             # ./vendor/bin/drush import-all -y
             ./vendor/bin/drush updatedb -y
             ./vendor/bin/drush cr
-
       - name: Adjust ownership and permissions
         uses: appleboy/ssh-action@master
         with:
@@ -50,4 +41,3 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             sudo chown -R www-data:www-data ${{ secrets.DOCROOT }}
-            sudo chmod -R 755 ${{ secrets.DOCROOT }}
