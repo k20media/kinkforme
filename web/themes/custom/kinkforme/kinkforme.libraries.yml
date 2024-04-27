@@ -1,7 +1,0 @@
-bootstrap:
-  version: 5.x
-  css:
-    theme:
-      css/bootstrap.min.css: {}
-  js:
-    js/bootstrap.min.js: {}

@@ -1,0 +1,22 @@
+uuid: 5a401035-3db1-48b4-928a-a685dacd11d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kink_for_me
+_core:
+  default_config_hash: RZt0ccc8TrhFCTVLpoMuQdsWaTkC0ssj2QEoQJEmqHA
+id: kink_for_me_messages
+theme: kink_for_me
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

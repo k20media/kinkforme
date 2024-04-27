@@ -1,0 +1,22 @@
+uuid: 6a2266fd-f4d0-49ed-b284-ac346a4acc22
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kink_for_me
+_core:
+  default_config_hash: sTV6uuhbirji1D1pdkb7jk4V6hQ8jGjn0mG9OzFWJ5U
+id: kink_for_me_secondary_local_tasks
+theme: kink_for_me
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

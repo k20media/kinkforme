@@ -1,0 +1,22 @@
+uuid: d1b1e7eb-95c8-466f-a10c-2c5fee0b470d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kink_for_me
+_core:
+  default_config_hash: bFZjp9crKAH4tVMpHF6PWt55qEjxggCS7f8gGwfDruU
+id: kink_for_me_breadcrumbs
+theme: kink_for_me
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

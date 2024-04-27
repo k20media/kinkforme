@@ -1,0 +1,23 @@
+uuid: c8dff832-b2dd-4c56-b437-f6e1fa1e7d82
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - kink_for_me
+_core:
+  default_config_hash: q086G0zJyCWoFylhCcvUiU4TW-Lphnetx8LA4Tlk-ZY
+id: kink_for_me_search_form_wide
+theme: kink_for_me
+region: top_header_form
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

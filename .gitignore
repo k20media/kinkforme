@@ -77,4 +77,4 @@
 .DS_Store
 
 # Ignore node_modules directory
-/web/themes/custom/kinkforme/node_modules/
+/web/themes/custom/*/node_modules/

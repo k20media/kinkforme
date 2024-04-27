@@ -1,0 +1,27 @@
+uuid: f750d1ae-1b27-4351-bb81-8c3a6b9a82ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - kink_for_me
+_core:
+  default_config_hash: V8cYy2cu-vLe0TvzeFVPPFPPq57i3b_xIVmSe4N3L8M
+id: kink_for_me_account_menu
+theme: kink_for_me
+region: secondary_menu
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }
