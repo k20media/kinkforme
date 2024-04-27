@@ -75,3 +75,6 @@
 /.editorconfig
 /.gitattributes
 .DS_Store
+
+# Ignore node_modules directory
+/web/themes/custom/kinkforme/node_modules/
