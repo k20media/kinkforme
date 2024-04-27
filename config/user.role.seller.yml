@@ -1,9 +1,16 @@
 uuid: 7ce97d59-d4a7-4b18-955a-f22602d78c49
 langcode: en-gb
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.listing
+  module:
+    - node
 id: seller
 label: Seller
 weight: -7
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create listing content'
+  - 'delete own listing content'
+  - 'edit own listing content'

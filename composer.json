@@ -27,6 +27,7 @@
         "drupal/pathauto": "^1.12",
         "drupal/private_message": "^3.0",
         "drupal/profile": "^1.10",
+        "drupal/redirect_after_login": "^3.0",
         "drush/drush": "^12.5"
     },
     "conflict": {

@@ -1,0 +1,8 @@
+login_redirection:
+  anonymous: null
+  authenticated: /
+  buyer: /
+  seller: /seller-dashboard
+  content_editor: /
+  administrator: /
+exclude_urls: ''

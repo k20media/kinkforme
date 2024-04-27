@@ -1,18 +1,16 @@
-uuid: d83a171a-d7fe-42e7-b7c9-0817b85b52c0
+uuid: 58c906ff-dbbe-4b31-9196-8787647f366a
 langcode: en-gb
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - node.type.page
+    - field.field.node.listing.body
+    - node.type.listing
   module:
     - text
     - user
-_core:
-  default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
-id: node.page.default
+id: node.listing.default
 targetEntityType: node
-bundle: page
+bundle: listing
 mode: default
 content:
   body:
@@ -20,10 +18,13 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 101
     region: content
   links:
-    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   langcode: true
+  private_message_link: true
