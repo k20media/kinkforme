@@ -1,0 +1,13 @@
+uuid: 3af98e7a-61cd-4db8-8375-e27da98f2926
+langcode: en-gb
+status: true
+dependencies: {  }
+id: buyer_profile
+label: 'Buyer Profile'
+display_label: 'Buyer Profile'
+multiple: false
+registration: false
+roles:
+  buyer: buyer
+allow_revisions: false
+new_revision: false

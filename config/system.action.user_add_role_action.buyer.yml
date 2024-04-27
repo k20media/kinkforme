@@ -1,0 +1,14 @@
+uuid: 886407ad-de14-475c-a0a4-30bab7472eef
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - user.role.buyer
+  module:
+    - user
+id: user_add_role_action.buyer
+label: 'Add the Buyer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: buyer
