@@ -5,17 +5,14 @@
 /web/sites/settings.local.php
 /web/default/settings.php
 
-
 # Ignore Drupal's file directory
 /web/sites/files
 /web/sites/*/files/
 /web/sites/default/files/
 /private-files/
 
-
 # Ignore Drupal's default private file directory
 /docroot/sites/*/private
-
 
 # Ignore configuration files that may contain sensitive information
 /web/sites/*/*settings*.php
@@ -77,5 +74,4 @@
 /drupal
 /.editorconfig
 /.gitattributes
-.DS_Store
 .DS_Store
