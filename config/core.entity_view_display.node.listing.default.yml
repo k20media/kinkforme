@@ -3,22 +3,33 @@ langcode: en-gb
 status: true
 dependencies:
   config:
-    - field.field.node.listing.body
+    - field.field.node.listing.field_description
+    - field.field.node.listing.field_price
     - node.type.listing
   module:
-    - text
     - user
 id: node.listing.default
 targetEntityType: node
 bundle: listing
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
+  field_description:
+    type: basic_string
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 103
+    region: content
+  field_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }

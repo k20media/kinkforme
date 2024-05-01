@@ -4,29 +4,23 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.listing.body
+    - field.field.node.listing.field_description
+    - field.field.node.listing.field_price
     - node.type.listing
   module:
-    - text
     - user
 id: node.listing.teaser
 targetEntityType: node
 bundle: listing
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  field_description: true
+  field_price: true
   langcode: true
   private_message_link: true
