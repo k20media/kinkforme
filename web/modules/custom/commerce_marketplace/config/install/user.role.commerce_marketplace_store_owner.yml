@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: commerce_marketplace_store_owner
+label: 'Marketplace store owner'
+weight: 4
+permissions:
+  - 'create commerce_store'
+  - 'update own commerce_store'
+  - 'view own commerce_store'

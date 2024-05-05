@@ -1,0 +1,18 @@
+# commerce_marketplace.info.yml
+name: Commerce Marketplace
+description: Adds capabilities for implementing a marketplace store.
+core_version_requirement: ^10
+type: module
+dependencies:
+  - commerce:commerce_store
+
+permissions:
+  - 'create commerce_store'
+  - 'update own commerce_store'
+  - 'view own commerce_store'
+
+services:
+  commerce_marketplace.commerce_store_permission:
+    class: Drupal\commerce_marketplace\Permission\CommerceStorePermission
+    tags:
+      - { name: dynamic_permission }

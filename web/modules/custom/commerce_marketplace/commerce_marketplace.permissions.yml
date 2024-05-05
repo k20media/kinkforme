@@ -1,0 +1,8 @@
+'create commerce_store':
+  title: 'Create commerce stores'
+
+'update own commerce_store':
+  title: 'Update own commerce stores'
+
+'view own commerce_store':
+  title: 'View own commerce stores'
