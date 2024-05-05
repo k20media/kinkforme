@@ -1,0 +1,16 @@
+uuid: bca24466-92e7-4241-a265-9c9844c6b7b3
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - commerce_marketplace
+_core:
+  default_config_hash: 10jcgPQz6hl5vd8PvTqDibHbts86ukjTrQncJhbAE_s
+id: commerce_marketplace_store_owner
+label: 'Marketplace store owner'
+weight: -6
+is_admin: null
+permissions:
+  - 'create commerce_store'
+  - 'update own commerce_store'
+  - 'view own commerce_store'
