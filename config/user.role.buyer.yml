@@ -1,9 +1,0 @@
-uuid: d74576cb-8563-4c2c-af72-7da7772927ff
-langcode: en-gb
-status: true
-dependencies: {  }
-id: buyer
-label: Buyer
-weight: -8
-is_admin: null
-permissions: {  }
