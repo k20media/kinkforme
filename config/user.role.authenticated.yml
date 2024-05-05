@@ -9,6 +9,7 @@ dependencies:
     - commerce_checkout
     - commerce_order
     - commerce_product
+    - commerce_store
     - contact
     - file
     - filter
@@ -33,4 +34,5 @@ permissions:
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'view commerce_product'
+  - 'view commerce_store'
   - 'view own commerce_order'

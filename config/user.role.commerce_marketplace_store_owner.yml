@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - commerce_marketplace
+    - commerce_product
+    - commerce_store
 _core:
   default_config_hash: 10jcgPQz6hl5vd8PvTqDibHbts86ukjTrQncJhbAE_s
 id: commerce_marketplace_store_owner
@@ -11,6 +13,10 @@ label: 'Marketplace store owner'
 weight: -6
 is_admin: null
 permissions:
+  - 'access commerce_product overview'
   - 'create commerce_store'
+  - 'create online commerce_store'
   - 'update own commerce_store'
+  - 'view commerce_store'
+  - 'view default commerce_product'
   - 'view own commerce_store'
