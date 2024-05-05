@@ -78,3 +78,6 @@
 
 # Ignore node_modules directory
 /web/themes/custom/*/node_modules/
+
+# IDE settings
+.vscode/

@@ -10,7 +10,6 @@ dependencies:
     - file
     - node
     - path
-    - private_message
     - system
     - taxonomy
     - toolbar
@@ -33,7 +32,6 @@ permissions:
   - 'edit own comments'
   - 'edit terms in tags'
   - 'revert all revisions'
-  - 'use private messaging system'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

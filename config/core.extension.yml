@@ -2,6 +2,7 @@ _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 langcode: en-gb
 module:
+  address: 0
   admin_toolbar: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
@@ -14,6 +15,16 @@ module:
   breakpoint: 0
   ckeditor5: 0
   comment: 0
+  commerce: 0
+  commerce_cart: 0
+  commerce_checkout: 0
+  commerce_checkout_order_fields: 0
+  commerce_log: 0
+  commerce_number_pattern: 0
+  commerce_order: 0
+  commerce_price: 0
+  commerce_product: 0
+  commerce_store: 0
   config: 0
   contact: 0
   contextual: 0
@@ -31,8 +42,7 @@ module:
   help: 0
   history: 0
   image: 0
-  jsonapi: 0
-  jsonapi_extras: 0
+  inline_entity_form: 0
   language: 0
   link: 0
   locale: 0
@@ -46,13 +56,12 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
-  private_message: 0
-  private_message_notify: 0
   profile: 0
   redirect_after_login: 0
   search: 0
   serialization: 0
   shortcut: 0
+  state_machine: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -63,7 +72,6 @@ module:
   views_ui: 0
   pathauto: 1
   views: 10
-  paragraphs: 11
   standard: 1000
 theme:
   claro: 0

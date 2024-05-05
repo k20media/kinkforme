@@ -13,14 +13,14 @@ logo:
 third_party_settings:
   shortcut:
     module_link: true
-preset_accent_color: yellow
+preset_accent_color: neutral
 preset_focus_color: gin
 enable_darkmode: '1'
-classic_toolbar: horizontal
+classic_toolbar: classic
 secondary_toolbar_frontend: true
-high_contrast_mode: true
+high_contrast_mode: false
 accent_color: '#e0429f'
 focus_color: ''
-layout_density: medium
+layout_density: default
 show_description_toggle: false
 show_user_theme_settings: false

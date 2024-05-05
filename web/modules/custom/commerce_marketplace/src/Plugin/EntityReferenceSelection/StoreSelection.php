@@ -23,14 +23,9 @@ class StoreSelection extends DefaultSelection {
    */
   protected function buildEntityQuery($match = NULL, $match_operator = 'CONTAINS') {
     $query = parent::buildEntityQuery($match, $match_operator);
-    $target_type = $this->configuration['target_type'];
-    $entity_type = $this->entityManager->getDefinition($target_type);
-    // Do not alter access if user has admin permission.
-    if ($this->currentUser->hasPermission($entity_type->getAdminPermission())) {
-      return $query;
-    }
+
     // A user who can view any can select any.
-    elseif ($this->currentUser->hasPermission('view any commerce_store')) {
+    if ($this->currentUser->hasPermission('view any commerce_store')) {
       return $query;
     }
     // Else make sure they can edit their own store (assumes one bundle.)
