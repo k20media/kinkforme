@@ -6,6 +6,10 @@
  */
 
 use Drupal\commerce_marketplace\StoreAccessControlHandler;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\commerce_product\Entity\ProductInterface;
+use Drupal\Core\Entity\EntityStorageException;
 
 /**
  * Implements hook_entity_type_alter().
@@ -15,3 +19,48 @@ function commerce_marketplace_entity_type_alter(array &$entity_types) {
   $entity_types['commerce_store']->setAccessClass(StoreAccessControlHandler::class);
 }
 
+
+/**
+ * Implements hook_form_alter().
+ */
+function commerce_marketplace_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Check if the form is the commerce product default form or add form or edit form.
+  if (in_array($form_id, ['commerce_product_default_form', 'commerce_product_default_add_form', 'commerce_product_default_edit_form'])) {
+    // Check if the 'meta' section exists in the form.
+    if (isset($form['meta'])) {
+      // Hide the 'meta' section.
+      $form['meta']['#access'] = FALSE;
+    }
+  }
+}
+
+
+/**
+ * Implements hook_ENTITY_TYPE_create() for commerce_product entities.
+ */
+function commerce_marketplace_commerce_product_create(ProductInterface $product) {
+  $uid = \Drupal::currentUser()->id();
+
+  // Load the users.
+  $store = \Drupal::entityTypeManager()->getStorage('commerce_store')->loadByProperties(['uid' => $uid]);
+  //$store = reset($store);
+  $store = FALSE;
+
+  // Check if the store is loaded successfully.
+  if ($store) {
+    // Set the 'stores' field to the store ID.
+    $product->set('stores', $store->id());
+  }
+  else {
+    // Log an error.
+    \Drupal::logger('commerce_marketplace')->error('User %user_id attempted to create a product without a store.', [
+      '%user_id' => $uid,
+    ]);
+
+    // Set an error message in the form state.
+    \Drupal::formBuilder()->setErrorByName('stores', t('Cannot create product: Current user does not have a store.'));
+
+    // Stop the product being saved.
+    return FALSE;
+  }
+}
