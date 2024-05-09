@@ -36,31 +36,41 @@ function commerce_marketplace_form_alter(&$form, FormStateInterface $form_state,
 
 
 /**
+ * Implements hook_form_FORM_ID_alter() for the commerce product form.
+ */
+function commerce_marketplace_form_commerce_product_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Add a custom validation handler.
+  $form['#validate'][] = 'commerce_marketplace_product_form_validate';
+}
+
+
+/**
+ * Custom validation handler for the commerce product form.
+ */
+function commerce_marketplace_product_form_validate($form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $store_service = \Drupal::service('commerce_marketplace.current_user_store');
+  $store_id = $store_service->getCurrentUserStoreId();
+
+  if (!$store_id) {
+    // Set an error on the form if the user does not have a store.
+    $form_state->setErrorByName('stores', t('You must create a store before you can create a product.'));
+  }
+}
+
+
+/**
  * Implements hook_ENTITY_TYPE_create() for commerce_product entities.
  */
-function commerce_marketplace_commerce_product_create(ProductInterface $product) {
-  $uid = \Drupal::currentUser()->id();
+function commerce_marketplace_commerce_product_create(\Drupal\commerce_product\Entity\ProductInterface $product) {
+  $store_service = \Drupal::service('commerce_marketplace.current_user_store');
+  $store_id = $store_service->getCurrentUserStoreId();
 
-  // Load the users.
-  $store = \Drupal::entityTypeManager()->getStorage('commerce_store')->loadByProperties(['uid' => $uid]);
-  //$store = reset($store);
-  $store = FALSE;
-
-  // Check if the store is loaded successfully.
-  if ($store) {
-    // Set the 'stores' field to the store ID.
-    $product->set('stores', $store->id());
+  if ($store_id) {
+    // Only proceed if there's a store ID, which there should be if the form validation passed.
+    $product->set('stores', $store_id);  // Make sure this line aligns with your field's needs.
   }
   else {
-    // Log an error.
-    \Drupal::logger('commerce_marketplace')->error('User %user_id attempted to create a product without a store.', [
-      '%user_id' => $uid,
-    ]);
-
-    // Set an error message in the form state.
-    \Drupal::formBuilder()->setErrorByName('stores', t('Cannot create product: Current user does not have a store.'));
-
-    // Stop the product being saved.
-    return FALSE;
+    // Optionally log the unexpected situation since form validation should prevent this.
+    \Drupal::logger('commerce_marketplace')->warning('Attempted to create a product without a store. This should have been caught by form validation.');
   }
 }

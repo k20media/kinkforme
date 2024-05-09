@@ -1,0 +1,7 @@
+# commerce_marketplace.info.yml
+name: Store Dashboard
+description: Adds capabilities for displaying a dashboard for a users store.
+core_version_requirement: ^10
+type: module
+dependencies:
+  - commerce:commerce_store

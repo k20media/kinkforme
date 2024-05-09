@@ -1,0 +1,4 @@
+services:
+  commerce_marketplace.current_user_store:
+    class: Drupal\commerce_marketplace\CurrentUserStoreService
+    arguments: ['@entity_type.manager', '@current_user']

@@ -1,0 +1,13 @@
+services:
+  store_dashboard.dashboard_metrics_form:
+    class: Drupal\commerce_order\Form\DashboardMetricsForm
+    arguments:
+      - '@cache.default'
+      - '@database'
+      - '@commerce_price.currency_formatter'
+      - '@date.formatter'
+      - '@entity_type.manager'
+      - '@module_handler'
+      - '@config.factory'
+    tags:
+      - { name: form_type, id: store_dashboard_dashboard_metrics_form }
