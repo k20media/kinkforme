@@ -1,0 +1,46 @@
+uuid: 69ef9e27-2f21-4d3a-8cce-6d2c203e2f8c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.clothing
+    - field.field.commerce_product.clothing.body
+  module:
+    - text
+id: commerce_product.clothing.default
+targetEntityType: commerce_product
+bundle: clothing
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  stores: true
+  uid: true
+  variations: true

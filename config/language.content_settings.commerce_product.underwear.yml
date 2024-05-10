@@ -1,0 +1,11 @@
+uuid: 054409e3-eccf-448f-9631-20f2cdadc98c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.underwear
+id: commerce_product.underwear
+target_entity_type_id: commerce_product
+target_bundle: underwear
+default_langcode: site_default
+language_alterable: false

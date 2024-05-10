@@ -1,0 +1,24 @@
+uuid: 70dac7b2-1dd3-4f1b-b4ba-75cf88b07461
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.clothing
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.clothing.body
+field_name: body
+entity_type: commerce_product
+bundle: clothing
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

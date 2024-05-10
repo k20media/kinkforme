@@ -28,6 +28,7 @@
         "drupal/gin_toolbar": "^1.0@rc",
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/jsonapi_extras": "^3.24",
+        "drupal/menu_per_role": "^1.6",
         "drupal/paragraphs": "^1.17",
         "drupal/pathauto": "^1.12",
         "drupal/private_message": "^3.0",

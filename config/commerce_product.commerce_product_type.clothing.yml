@@ -1,0 +1,14 @@
+uuid: 03d41a16-48da-4b2e-8db5-c745f12144d3
+langcode: en-gb
+status: true
+dependencies: {  }
+id: clothing
+label: Clothing
+traits: {  }
+locked: false
+description: ''
+variationType: clothing
+variationTypes:
+  - clothing
+multipleVariations: true
+injectVariationFields: true

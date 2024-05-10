@@ -1,0 +1,14 @@
+uuid: 539971b9-d783-4cdc-a56d-940543c5d903
+langcode: en-gb
+status: true
+dependencies: {  }
+id: underwear
+label: Underwear
+traits: {  }
+locked: false
+description: 'List an item of underwear for sale'
+variationType: underwear
+variationTypes:
+  - underwear
+multipleVariations: true
+injectVariationFields: true

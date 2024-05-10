@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: seller-navigation
 label: 'Seller Navigation'
-description: ''
+description: "Seller's Navigation (products, orders etc)"
 locked: false

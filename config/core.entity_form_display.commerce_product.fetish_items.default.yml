@@ -1,0 +1,46 @@
+uuid: cfdc044d-aabf-466a-badb-c769c1875b05
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.fetish_items
+    - field.field.commerce_product.fetish_items.body
+  module:
+    - text
+id: commerce_product.fetish_items.default
+targetEntityType: commerce_product
+bundle: fetish_items
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  stores: true
+  uid: true
+  variations: true

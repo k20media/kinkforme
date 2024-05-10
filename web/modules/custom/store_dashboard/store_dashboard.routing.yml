@@ -2,6 +2,14 @@ store_dashboard.dashboard_page:
   path: '/store/dashboard'
   defaults:
     _controller: '\Drupal\store_dashboard\Controller\StoreDashboardController::dashboardPage'
+    _title: 'Seller Dashboard'
+  requirements:
+    _permission: 'access content'
+
+store_dashboard.store_redirect:
+  path: '/store'
+  defaults:
+    _controller: '\Drupal\store_dashboard\Controller\StoreDashboardController::redirectToUserStore'
     _title: 'My Store'
   requirements:
     _permission: 'access content'

@@ -5,6 +5,8 @@ namespace Drupal\store_dashboard\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Form\FormBuilderInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Url;
 
 /**
  * Controller for the store dashboard.
@@ -44,7 +46,24 @@ class StoreDashboardController extends ControllerBase {
      *   A Drupal form render array.
      */
     public function dashboardPage() {
-        $form = $this->formBuilder->getForm('Drupal\store_dashboard\Form\CustomDashboardMetricsForm');
-        return $form;
+      $form = $this->formBuilder->getForm('Drupal\store_dashboard\Form\CustomDashboardMetricsForm');
+      return $form;
     }
-}
+
+    public function redirectToUserStore() {
+      $store_service = \Drupal::service('commerce_marketplace.current_user_store');
+      $store_id = $store_service->getCurrentUserStoreId();
+
+      if ($store_id) {
+        // Generate the direct URL to the store page
+        $url = Url::fromUri('internal:/store/' . $store_id)->toString();
+        return new RedirectResponse($url);
+      }
+      else {
+        // Set a message and redirect to the store creation page
+        $this->messenger()->addMessage($this->t('You must create a store first.'), 'error');
+        $url = Url::fromUri('internal:/store/add')->toString();
+        return new RedirectResponse($url);
+      }
+    }
+  }
