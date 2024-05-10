@@ -1,8 +1,7 @@
 login_redirection:
   anonymous: null
   authenticated: /
-  buyer: /
-  seller: /seller-dashboard
+  commerce_marketplace_store_owner: /store/dashboard
   content_editor: /
-  administrator: /
+  administrator: /admin/commerce
 exclude_urls: ''

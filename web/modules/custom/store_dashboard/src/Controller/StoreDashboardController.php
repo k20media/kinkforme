@@ -4,38 +4,47 @@ namespace Drupal\store_dashboard\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Form\FormBuilderInterface;
-use Drupal\Core\Security\TrustedCallbackInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class StoreDashboardController extends ControllerBase implements TrustedCallbackInterface {
+/**
+ * Controller for the store dashboard.
+ */
+class StoreDashboardController extends ControllerBase {
 
-  protected $formBuilder;
+    /**
+     * The form builder.
+     *
+     * @var \Drupal\Core\Form\FormBuilderInterface
+     */
+    protected $formBuilder;
 
-  public function __construct(FormBuilderInterface $formBuilder) {
-    $this->formBuilder = $formBuilder;
-  }
+    /**
+     * Constructs a new StoreDashboardController.
+     *
+     * @param \Drupal\Core\Form\FormBuilderInterface $formBuilder
+     *   The form builder.
+     */
+    public function __construct(FormBuilderInterface $formBuilder) {
+        $this->formBuilder = $formBuilder;
+    }
 
-  public static function create(ContainerInterface $container) {
-    return new static(
-      $container->get('form_builder')
-    );
-  }
+    /**
+     * {@inheritdoc}
+     */
+    public static function create(ContainerInterface $container) {
+        return new static(
+            $container->get('form_builder')
+        );
+    }
 
-  public function dashboardPage() {
-    // Ensure you use the fully qualified namespace of the form class
-    $form = $this->formBuilder->getForm('Drupal\commerce_order\Form\DashboardMetricsForm');
-    return $form;
-  }
-
-  // Implement the TrustedCallbackInterface
-  public static function trustedCallbacks() {
-    return ['adjustForm'];
-  }
-
-  public function adjustForm(array $form) {
-    //if (isset($form['filters']['store_id'])) {
-        unset($form['filters']);
-    //}
-    return $form;
-  }
+    /**
+     * Render the custom dashboard metrics form.
+     *
+     * @return array
+     *   A Drupal form render array.
+     */
+    public function dashboardPage() {
+        $form = $this->formBuilder->getForm('Drupal\store_dashboard\Form\CustomDashboardMetricsForm');
+        return $form;
+    }
 }

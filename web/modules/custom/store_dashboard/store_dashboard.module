@@ -1,25 +1,2 @@
 <?php
 
-/**
- * Implements hook_form_FORM_ID_alter() for DashboardMetricsForm.
- */
-// function store_dashboard_form_commerce_order_dashboard_metrics_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-//     // Fetch the current user's store ID using the service.
-//     $store_service = \Drupal::service('commerce_marketplace.current_user_store');
-//     $store_id = $store_service->getCurrentUserStoreId();
-
-//     // Check if the user has a store ID.
-//     if ($store_id) {
-//         // Set the value of the store_id field and hide it.
-//         $form['filters']['store_id'] = [
-//             // '#type' => 'hidden',
-//             '#value' => $store_id,
-//         ];
-//     }
-//     else {
-//         // No store found for the user, inform them appropriately.
-//         \Drupal::messenger()->addMessage(t('You must have a store to view this dashboard.'), 'error');
-//         // Optionally, redirect or disable form elements.
-//         // $form['actions']['submit']['#access'] = FALSE; // Disable submit if applicable.
-//     }
-// }

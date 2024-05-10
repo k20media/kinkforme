@@ -1,7 +1,7 @@
 store_dashboard.dashboard_page:
-  path: '/my-store/dashboard'
+  path: '/store/dashboard'
   defaults:
-    _controller: 'Drupal\store_dashboard\Controller\StoreDashboardController::dashboardPage'
-    _title: 'Store Dashboard'
+    _controller: '\Drupal\store_dashboard\Controller\StoreDashboardController::dashboardPage'
+    _title: 'My Store'
   requirements:
     _permission: 'access content'
