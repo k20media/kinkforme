@@ -22,3 +22,4 @@ permissions:
   - 'update own seller profile'
   - 'update own underwear commerce_product'
   - 'view own seller profile'
+  - 'view own unpublished commerce_product'
