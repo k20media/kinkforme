@@ -7,7 +7,7 @@ dependencies:
     - profile
 id: seller
 label: Seller
-weight: -7
+weight: -6
 is_admin: null
 permissions:
   - 'create clothing commerce_product'

@@ -15,8 +15,8 @@ settings:
       value: seller
       label: Seller
     -
-      value: customer
-      label: Customer
+      value: buyer
+      label: Buyer
   allowed_values_function: ''
 module: options
 locked: false

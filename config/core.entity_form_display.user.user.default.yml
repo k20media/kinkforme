@@ -3,6 +3,7 @@ langcode: en-gb
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_adult_confirmation
     - field.field.user.user.field_user_type
     - field.field.user.user.user_picture
   module:
@@ -25,8 +26,10 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  buyer_profiles: true
   contact: true
   customer_profiles: true
+  field_adult_confirmation: true
   field_user_type: true
   langcode: true
   path: true

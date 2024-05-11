@@ -1,0 +1,22 @@
+uuid: 37c995d1-b907-4205-986f-0f616dbdad3f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_adult_confirmation
+  module:
+    - user
+id: user.user.field_adult_confirmation
+field_name: field_adult_confirmation
+entity_type: user
+bundle: user
+label: 'Adult Confirmation'
+description: "I confirm i'm 18+ years old and agree to the site terms and conditions."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

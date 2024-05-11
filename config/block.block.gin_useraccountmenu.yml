@@ -30,5 +30,4 @@ visibility:
     context_mapping:
       user: '@user.current_user_context:current_user'
     roles:
-      customer: customer
       seller: seller

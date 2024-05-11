@@ -16,7 +16,6 @@ display_label: 'Customer information'
 multiple: false
 registration: false
 roles:
-  customer: customer
-  seller: seller
+  buyer: buyer
 allow_revisions: false
 new_revision: false

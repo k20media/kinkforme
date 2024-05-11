@@ -3,6 +3,7 @@ langcode: en-gb
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_adult_confirmation
     - field.field.user.user.field_user_type
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -37,14 +38,14 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  customer_profiles:
+  buyer_profiles:
     type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: default
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_user_type:
     type: list_default
@@ -79,4 +80,6 @@ content:
     weight: 0
     region: content
 hidden:
+  customer_profiles: true
+  field_adult_confirmation: true
   langcode: true

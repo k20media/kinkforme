@@ -17,8 +17,8 @@ function commerce_user_roles_user_presave(UserInterface $user) {
       if ($user_type === 'seller') {
         $user->addRole('seller');
       }
-      elseif ($user_type === 'customer') {
-        $user->addRole('customer');
+      elseif ($user_type === 'buyer') {
+        $user->addRole('buyer');
       }
     }
   }
@@ -29,6 +29,6 @@ function commerce_user_roles_user_presave(UserInterface $user) {
  */
 function commerce_user_roles_help($route_name, $route_match) {
   if ($route_name === 'help.page.commerce_user_roles') {
-    return '<p>' . t('Adds a field to the user registration form allowing users to select a user type of either Seller or Customer. Based on the selection, the corresponding role is automatically assigned to the user.') . '</p>';
+    return '<p>' . t('Adds a field to the user registration form allowing users to select a user type of either Seller or Buyer. Based on the selection, the corresponding role is automatically assigned to the user.') . '</p>';
   }
 }

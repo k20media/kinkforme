@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.field_adult_confirmation
     - field.field.user.user.field_user_type
     - field.field.user.user.user_picture
   module:
@@ -20,13 +21,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_user_type:
-    type: options_buttons
+  field_adult_confirmation:
+    type: boolean_checkbox
     weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_user_type:
+    type: options_select
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  buyer_profiles: true
   contact: true
   customer_profiles: true
   langcode: true

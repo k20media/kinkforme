@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_adult_confirmation
     - field.field.user.user.field_user_type
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -29,7 +30,9 @@ content:
     weight: 0
     region: content
 hidden:
+  buyer_profiles: true
   customer_profiles: true
+  field_adult_confirmation: true
   field_user_type: true
   langcode: true
   member_for: true

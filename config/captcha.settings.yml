@@ -4,7 +4,7 @@ langcode: en-gb
 enable_globally: 0
 enable_globally_on_admin_routes: false
 default_challenge: image_captcha/Image
-description: 'This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
+description: ''
 title: CAPTCHA
 administration_mode: false
 administration_mode_on_admin_routes: false
