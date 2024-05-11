@@ -1,23 +1,23 @@
-uuid: 1a55cefd-43d1-47e4-b570-5b611111c183
+uuid: 7dff88b0-3677-4a90-8f35-75400b18bf6e
 langcode: en-gb
 status: true
 dependencies:
   config:
-    - system.menu.seller-navigation
+    - system.menu.account
   module:
     - system
     - user
   theme:
     - gin
-id: gin_sellernavigation
+id: gin_useraccountmenu
 theme: gin
-region: content
-weight: -4
+region: header
+weight: -3
 provider: null
-plugin: 'system_menu_block:seller-navigation'
+plugin: 'system_menu_block:account'
 settings:
-  id: 'system_menu_block:seller-navigation'
-  label: 'Seller Navigation'
+  id: 'system_menu_block:account'
+  label: 'User account menu'
   label_display: '0'
   provider: system
   level: 1
@@ -30,4 +30,5 @@ visibility:
     context_mapping:
       user: '@user.current_user_context:current_user'
     roles:
-      commerce_marketplace_store_owner: commerce_marketplace_store_owner
+      customer: customer
+      seller: seller

@@ -13,8 +13,10 @@ _core:
 id: customer
 label: Customer
 display_label: 'Customer information'
-multiple: true
+multiple: false
 registration: false
-roles: {  }
+roles:
+  customer: customer
+  seller: seller
 allow_revisions: false
 new_revision: false

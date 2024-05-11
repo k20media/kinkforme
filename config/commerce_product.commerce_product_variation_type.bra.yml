@@ -1,0 +1,10 @@
+uuid: dd7bd0bf-562c-4073-be52-cf2f9beede7b
+langcode: en-gb
+status: true
+dependencies: {  }
+id: bra
+label: Bra
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: null

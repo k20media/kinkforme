@@ -1,0 +1,19 @@
+uuid: 8aaa98ad-85f6-4ac1-a829-e9a109c6141b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_bio
+    - profile.type.seller
+id: profile.seller.field_bio
+field_name: field_bio
+entity_type: profile
+bundle: seller
+label: Bio
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -10,7 +10,6 @@ dependencies:
     - commerce_order
     - commerce_product
     - commerce_store
-    - contact
     - file
     - filter
     - search
@@ -27,13 +26,14 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access shortcuts'
-  - 'access site-wide contact form'
   - 'delete own files'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view clothing commerce_product'
   - 'view commerce_product'
-  - 'view commerce_store'
+  - 'view fetish_items commerce_product'
   - 'view online commerce_store'
   - 'view own commerce_order'
+  - 'view underwear commerce_product'

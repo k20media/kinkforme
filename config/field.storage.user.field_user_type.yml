@@ -1,0 +1,27 @@
+uuid: 61952897-f0a7-4f1f-9529-b653d5e2ff9e
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_user_type
+field_name: field_user_type
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: seller
+      label: Seller
+    -
+      value: customer
+      label: Customer
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

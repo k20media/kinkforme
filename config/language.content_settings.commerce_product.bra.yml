@@ -1,0 +1,11 @@
+uuid: e62b4bcd-236a-4940-bf33-bf492d6a20af
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.bra
+id: commerce_product.bra
+target_entity_type_id: commerce_product
+target_bundle: bra
+default_langcode: site_default
+language_alterable: false

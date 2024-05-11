@@ -1,25 +1,27 @@
-uuid: f421f1eb-af97-434b-855b-22cbf76d036c
+uuid: b62fdea7-6624-4e29-80a2-eb2515dc8cd6
 langcode: en-gb
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.user.register
     - field.field.user.user.field_user_type
     - field.field.user.user.user_picture
   module:
     - user
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
-id: user.user.default
+id: user.user.register
 targetEntityType: user
 bundle: user
-mode: default
+mode: register
 content:
   account:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-  language:
+  field_user_type:
+    type: options_buttons
     weight: 1
     region: content
     settings: {  }
@@ -27,8 +29,8 @@ content:
 hidden:
   contact: true
   customer_profiles: true
-  field_user_type: true
   langcode: true
+  language: true
   path: true
   seller_profiles: true
   timezone: true

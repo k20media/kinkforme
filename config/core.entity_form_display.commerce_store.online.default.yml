@@ -4,8 +4,6 @@ status: true
 dependencies:
   config:
     - commerce_store.commerce_store_type.online
-  module:
-    - address
 _core:
   default_config_hash: VDGg8hSWKm_pGY53jsKuNoHY_Xf6nm_diqAC066ktA4
 id: commerce_store.online.default
@@ -13,39 +11,18 @@ targetEntityType: commerce_store
 bundle: online
 mode: default
 content:
-  address:
-    type: address_default
-    weight: 5
-    region: content
-    settings:
-      wrapper_type: fieldset
-    third_party_settings: {  }
-  billing_countries:
-    type: options_select
-    weight: 6
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   default_currency:
     type: options_select
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
-  mail:
-    type: email_default
     weight: 1
     region: content
     settings:
-      placeholder: ''
-      size: 60
+      include_locked: true
     third_party_settings: {  }
   name:
     type: string_textfield
@@ -68,14 +45,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  timezone:
-    type: options_select
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  address: true
+  billing_countries: true
   created: true
   is_default: true
+  mail: true
   path: true
+  timezone: true
   uid: true

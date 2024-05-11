@@ -1,0 +1,24 @@
+uuid: c2e24caf-c0da-480a-a881-31e7f5e3da84
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - profile
+id: seller
+label: Seller
+weight: -7
+is_admin: null
+permissions:
+  - 'create clothing commerce_product'
+  - 'create fetish_items commerce_product'
+  - 'create seller profile'
+  - 'create underwear commerce_product'
+  - 'delete own clothing commerce_product'
+  - 'delete own fetish_items commerce_product'
+  - 'delete own underwear commerce_product'
+  - 'update own clothing commerce_product'
+  - 'update own fetish_items commerce_product'
+  - 'update own seller profile'
+  - 'update own underwear commerce_product'
+  - 'view own seller profile'

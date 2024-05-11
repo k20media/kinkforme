@@ -1,13 +1,15 @@
-uuid: 3af98e7a-61cd-4db8-8375-e27da98f2926
+uuid: e1fdf874-c007-4ec6-a13a-a8de2579743f
 langcode: en-gb
 status: true
 dependencies: {  }
-id: buyer_profile
-label: 'Buyer Profile'
+third_party_settings:
+  commerce_order:
+    customer_profile_type: false
+id: buyer
+label: Buyer
 display_label: 'Buyer Profile'
 multiple: false
 registration: false
-roles:
-  buyer: buyer
+roles: {  }
 allow_revisions: false
 new_revision: false

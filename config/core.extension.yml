@@ -13,6 +13,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  captcha: 0
   ckeditor5: 0
   comment: 0
   commerce: 0
@@ -20,12 +21,12 @@ module:
   commerce_checkout: 0
   commerce_checkout_order_fields: 0
   commerce_log: 0
-  commerce_marketplace: 0
   commerce_number_pattern: 0
   commerce_order: 0
   commerce_price: 0
   commerce_product: 0
   commerce_store: 0
+  commerce_user_roles: 0
   config: 0
   contact: 0
   contextual: 0
@@ -36,6 +37,7 @@ module:
   entity: 0
   entity_reference_revisions: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -43,11 +45,13 @@ module:
   help: 0
   history: 0
   image: 0
+  image_captcha: 0
   inline_entity_form: 0
   language: 0
   link: 0
   locale: 0
   menu_link_content: 0
+  menu_per_role: 0
   menu_ui: 0
   message: 0
   message_notify: 0
@@ -63,7 +67,6 @@ module:
   serialization: 0
   shortcut: 0
   state_machine: 0
-  store_dashboard: 0
   system: 0
   taxonomy: 0
   text: 0

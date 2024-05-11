@@ -1,0 +1,21 @@
+uuid: ddb68812-552e-47a0-9125-62521db774e8
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_type
+  module:
+    - options
+    - user
+id: user.user.field_user_type
+field_name: field_user_type
+entity_type: user
+bundle: user
+label: 'User type'
+description: 'Do you want to register as a buyer or seller?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

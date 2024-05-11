@@ -1,0 +1,20 @@
+uuid: 07d7f7aa-3126-477d-ac26-ad602f26cc7a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.profile.seller.field_bio
+    - profile.type.seller
+id: profile.seller.default
+targetEntityType: profile
+bundle: seller
+mode: default
+content:
+  field_bio:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

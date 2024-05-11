@@ -1,0 +1,7 @@
+name: 'Commerce User Roles'
+type: module
+description: 'Automatically assigns roles to users based on their selected type during registration.'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - drupal:user
