@@ -10,44 +10,38 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Setup PHP with Composer
-      - name: Setup PHP
+      - name: Setup PHP Environment
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.PHP_VERSION }}
           tools: composer:v2
 
-      # Composer Validation
       - name: Validate composer.json and composer.lock
         run: composer validate
 
-      # Install Composer Dependencies
-      - name: Install composer dependencies
+      - name: Install PHP dependencies
         run: composer install --prefer-dist
 
-      # Setup Node.js for React
-      - name: Setup Node.js
+      - name: Setup Node.js Environment
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      # Install Node Modules for React
-      - name: Install Node dependencies
+      - name: Install Node.js dependencies
         run: |
           cd react-app
           npm install
 
-      # Build React App
-      - name: Build React app
+      - name: Build React application
         run: |
           cd react-app
           npm run build
 
-      # Lint React App (optional, add this if you have eslint set up)
-      # - name: Lint React app
+      # Optional: Lint React application
+      # - name: Lint React application
       #   run: |
       #     cd react-app
       #     npm run lint
