@@ -1,19 +1,53 @@
-name: Build & lint project
+name: Build & Lint Project
+
 on: [push]
+
 env:
   PHP_VERSION: '8.2'
+  NODE_VERSION: '16'
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      # Setup PHP with Composer
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.PHP_VERSION }}
           tools: composer:v2
+
+      # Composer Validation
       - name: Validate composer.json and composer.lock
         run: composer validate
+
+      # Install Composer Dependencies
       - name: Install composer dependencies
         run: composer install --prefer-dist
+
+      # Setup Node.js for React
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      # Install Node Modules for React
+      - name: Install Node dependencies
+        run: |
+          cd react-app
+          npm install
+
+      # Build React App
+      - name: Build React app
+        run: |
+          cd react-app
+          npm run build
+
+      # Lint React App (optional, add this if you have eslint set up)
+      - name: Lint React app
+        run: |
+          cd react-app
+          npm run lint

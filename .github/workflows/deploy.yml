@@ -1,18 +1,21 @@
 name: Deploy to Digital Ocean Droplet
+
 on:
   workflow_run:
-    workflows: ["Build & lint project"]
+    workflows: ["Build & Lint Project"]
     types:
       - completed
+
 jobs:
   deploy:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Deploy to droplet using SSH
+      # Deploy Drupal to the Droplet
+      - name: Deploy to droplet using SSH (Drupal and React)
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -21,18 +24,28 @@ jobs:
           debug: true
           script: |
             cd ${{ secrets.DOCROOT }}
+
+            # Pull latest changes
             git pull
 
-            # Build repo with composer
+            # Rebuild Drupal with composer
             rm -rf vendor
             composer install
 
-            # Drush commands
+            # Drush commands for Drupal
             ./vendor/bin/drush cr
             ./vendor/bin/drush config:import -y
-            # ./vendor/bin/drush import-all -y
             ./vendor/bin/drush updatedb -y
             ./vendor/bin/drush cr
+
+            # Navigate to React app directory and pull latest changes
+            cd react-app
+            npm install
+            npm run build
+
+            # Any other deployment steps for React
+
+      # Adjust ownership and permissions
       - name: Adjust ownership and permissions
         uses: appleboy/ssh-action@master
         with:
