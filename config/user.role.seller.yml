@@ -10,6 +10,7 @@ label: Seller
 weight: -6
 is_admin: null
 permissions:
+  - 'access user profiles'
   - 'create clothing commerce_product'
   - 'create fetish_items commerce_product'
   - 'create seller profile'

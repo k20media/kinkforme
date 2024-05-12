@@ -25,6 +25,7 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access toolbar'
+  - 'access user profiles'
   - 'administer url aliases'
   - 'create terms in tags'
   - 'create url aliases'

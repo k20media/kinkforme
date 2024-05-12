@@ -10,6 +10,7 @@ dependencies:
     - commerce_product
     - commerce_store
     - filter
+    - profile
     - search
     - system
 _core:
@@ -22,10 +23,13 @@ permissions:
   - 'access checkout'
   - 'access comments'
   - 'access content'
+  - 'access user profiles'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view any profile'
   - 'view clothing commerce_product'
   - 'view commerce_product'
   - 'view fetish_items commerce_product'
   - 'view online commerce_store'
+  - 'view own profile'
   - 'view underwear commerce_product'
