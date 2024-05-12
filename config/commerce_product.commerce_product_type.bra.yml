@@ -6,7 +6,7 @@ id: bra
 label: Bra
 traits: {  }
 locked: false
-description: ''
+description: 'List a bra sale.'
 variationType: bra
 variationTypes:
   - bra

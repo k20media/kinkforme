@@ -1,0 +1,14 @@
+uuid: ec101615-502d-46b0-8c44-6a7c760d8440
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - user
+id: users
+label: Users
+type: 'canonical_entities:user'
+pattern: '/profile/[user:account-name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

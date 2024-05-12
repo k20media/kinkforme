@@ -6,7 +6,7 @@ id: underwear
 label: Underwear
 traits: {  }
 locked: false
-description: 'List an item of underwear for sale'
+description: 'List an item of underwear for sale.'
 variationType: underwear
 variationTypes:
   - underwear

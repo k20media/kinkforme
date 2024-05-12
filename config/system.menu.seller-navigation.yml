@@ -1,8 +1,0 @@
-uuid: bb25f42c-1248-4006-a071-1566fe057a3c
-langcode: en-gb
-status: true
-dependencies: {  }
-id: seller-navigation
-label: 'Seller Navigation'
-description: "Seller's Navigation (products, orders etc)"
-locked: false

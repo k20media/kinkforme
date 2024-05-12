@@ -1,0 +1,25 @@
+uuid: 8c51fc6e-af3d-43b9-b56b-8994b3a767ae
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: products
+label: Products
+type: 'canonical_entities:commerce_product'
+pattern: '[commerce_product:uid:entity:account-name]/listings/[commerce_product:type]/[commerce_product:title:value]'
+selection_criteria:
+  5510443e-6bda-43e9-8184-4de4daece064:
+    id: 'entity_bundle:commerce_product'
+    negate: false
+    uuid: 5510443e-6bda-43e9-8184-4de4daece064
+    context_mapping:
+      commerce_product: commerce_product
+    bundles:
+      bra: bra
+      clothing: clothing
+      fetish_items: fetish_items
+      underwear: underwear
+selection_logic: and
+weight: -5
+relationships: {  }

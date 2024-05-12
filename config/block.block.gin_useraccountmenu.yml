@@ -11,8 +11,8 @@ dependencies:
     - gin
 id: gin_useraccountmenu
 theme: gin
-region: header
-weight: -3
+region: pre_content
+weight: -4
 provider: null
 plugin: 'system_menu_block:account'
 settings:
