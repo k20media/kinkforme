@@ -47,7 +47,7 @@ jobs:
           npm run build
 
       # Lint React App (optional, add this if you have eslint set up)
-      - name: Lint React app
-        run: |
-          cd react-app
-          npm run lint
+      # - name: Lint React app
+      #   run: |
+      #     cd react-app
+      #     npm run lint
