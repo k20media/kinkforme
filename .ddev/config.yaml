@@ -16,6 +16,8 @@ web_environment: []
 # MailHog mail catcher integration.
 use_mailhog: true
 
+# Use the custom nginx setting to configure next.js
+nginx_full_site_config: .ddev/nginx_custom/nginx-site.conf
 
 # Key features of DDEV's config.yaml:
 

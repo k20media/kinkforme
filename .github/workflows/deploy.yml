@@ -34,8 +34,8 @@ jobs:
             ./vendor/bin/drush updatedb -y  # Run database updates
             ./vendor/bin/drush cr  # Clear caches again
 
-            # Update and build React application
-            cd react-app
+            # Update and build Vue.js application
+            cd next_commerce_api
             npm install
             npm run build
 

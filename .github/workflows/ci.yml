@@ -32,16 +32,16 @@ jobs:
 
       - name: Install Node.js dependencies
         run: |
-          cd react-app
+          cd next_commerce_api
           npm install
 
-      - name: Build React application
+      - name: Build Vue.js application
         run: |
-          cd react-app
+          cd next_commerce_api
           npm run build
 
-      # Optional: Lint React application
-      # - name: Lint React application
+      # Optional: Lint Vue.js application
+      # - name: Lint Vue.js application
       #   run: |
-      #     cd react-app
+      #     cd next_commerce_api
       #     npm run lint
