@@ -81,3 +81,9 @@
 
 # IDE settings
 .vscode/
+
+/.ddev/.env
+
+# SSL Local Keys
+kinkforme.ddev.site+4-key.pem
+kinkforme.ddev.site+4.pem

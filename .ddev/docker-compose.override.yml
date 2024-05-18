@@ -1,0 +1,13 @@
+version: '3.6'
+services:
+  nextjs:
+    container_name: ${DDEV_SITENAME}-nextjs
+    image: node:16
+    volumes:
+      - ${NEXT_JS_APP_DIR}:/next_commerce_api
+    working_dir: /next_commerce_api
+    env_file:
+      - .ddev/.env
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm run dev"
