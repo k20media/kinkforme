@@ -8,7 +8,6 @@ webserver_type: nginx-fpm
 xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
-omit_containers: ['db', 'dba']
 database:
   type: mariadb
   version: "10.11"
