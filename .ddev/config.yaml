@@ -12,17 +12,16 @@ database:
   type: mariadb
   version: "10.11"
 use_dns_when_possible: true
+web_environment: []
 router_http_port: "80"
 router_https_port: "443"
 
-# MailHog mail catcher integration.
 use_mailhog: true
 
 disable_settings_management: true
 
-# Build and start the Next.js app.
 hooks:
   post-start:
     - exec-host: bash .ddev/scripts/generate-certificates.sh
-    - exec: cd ${NEXT_JS_APP_DIR} && npm install
-    - exec: cd ${NEXT_JS_APP_DIR} && pm2 start "npm run dev"
+    - exec: cd /var/www/html/next_commerce_api && npm install
+    - exec: cd /var/www/html/next_commerce_api && pm2 start "npm run dev"

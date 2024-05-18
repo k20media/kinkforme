@@ -1,13 +1,16 @@
 version: '3.6'
+
 services:
   nextjs:
-    container_name: ${DDEV_SITENAME}-nextjs
+    container_name: kinkforme-nextjs
     image: node:16
     volumes:
-      - ${NEXT_JS_APP_DIR}:/next_commerce_api
-    working_dir: /next_commerce_api
-    env_file:
-      - .ddev/.env
+      - ../next_commerce_api:/var/www/html/next_commerce_api
+    working_dir: /var/www/html/next_commerce_api
+    environment:
+      - NODE_ENV=development
+    expose:
+      - "3000"
     ports:
       - "3000:3000"
-    command: sh -c "npm install && npm run dev"
+    command: ["npm", "run", "dev"]
