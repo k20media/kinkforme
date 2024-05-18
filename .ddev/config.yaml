@@ -2,6 +2,8 @@ name: kinkforme
 type: drupal10
 docroot: web
 php_version: "8.2"
+composer_version: "2"
+nodejs_version: "16"
 webserver_type: nginx-fpm
 xdebug_enabled: false
 additional_hostnames: []
@@ -10,14 +12,20 @@ database:
     type: mariadb
     version: "10.11"
 use_dns_when_possible: true
-composer_version: "2"
 web_environment: []
+router_http_port: "80"
+router_https_port: "443"
 
 # MailHog mail catcher integration.
 use_mailhog: true
 
-# Use the custom nginx setting to configure next.js
-nginx_full_site_config: .ddev/nginx_custom/nginx-site.conf
+disable_settings_management: true
+
+# Build the next.js app.
+hooks:
+  post-start:
+    - exec: cd ${NEXT_JS_APP_DIR} && npm install
+    - exec: cd ${NEXT_JS_APP_DIR} && pm2 start "npm run dev"
 
 # Key features of DDEV's config.yaml:
 

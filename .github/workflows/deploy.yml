@@ -27,12 +27,12 @@ jobs:
             git pull  # Pull latest changes
 
             # Rebuild Drupal environment
-            rm -rf vendor  # Remove the vendor directory
-            composer install  # Install PHP dependencies
-            ./vendor/bin/drush cr  # Clear Drupal caches
-            ./vendor/bin/drush config:import -y  # Import latest configuration
-            ./vendor/bin/drush updatedb -y  # Run database updates
-            ./vendor/bin/drush cr  # Clear caches again
+            rm -rf vendor
+            composer install
+            ./vendor/bin/drush cr
+            ./vendor/bin/drush config:import -y
+            ./vendor/bin/drush updatedb -y
+            ./vendor/bin/drush cr
 
             # Update and build Vue.js application
             cd next_commerce_api
