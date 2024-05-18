@@ -5,7 +5,7 @@ on: [push]
 env:
   PHP_VERSION: '8.2'
   NODE_VERSION: '16'
-  NEXT_JS_APP_PATH: 'next_commerce_api'
+  NEXT_JS_APP_PATH: 'nextjs-app'
 
 jobs:
   build:
@@ -47,5 +47,5 @@ jobs:
       # Optional: Lint Vue.js application
       # - name: Lint Vue.js application
       #   run: |
-      #     cd next_commerce_api
+      #     cd nextjs-app
       #     npm run lint

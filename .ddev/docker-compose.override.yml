@@ -5,8 +5,8 @@ services:
     container_name: kinkforme-nextjs
     image: node:16
     volumes:
-      - ../next_commerce_api:/var/www/html/next_commerce_api
-    working_dir: /var/www/html/next_commerce_api
+      - ../nextjs-app:/var/www/html/nextjs-app
+    working_dir: /var/www/html/nextjs-app
     environment:
       - NODE_ENV=development
     expose:

@@ -23,5 +23,5 @@ disable_settings_management: true
 hooks:
   post-start:
     - exec-host: bash .ddev/scripts/generate-certificates.sh
-    - exec: cd /var/www/html/next_commerce_api && npm install
-    - exec: cd /var/www/html/next_commerce_api && pm2 start "npm run dev"
+    - exec: cd /var/www/html/nextjs-app && npm install
+    - exec: cd /var/www/html/nextjs-app && pm2 start "npm run dev"
