@@ -35,7 +35,7 @@ jobs:
             ./vendor/bin/drush cr
 
             # Update and build Vue.js application
-            cd next_commerce_api
+            cd web/themes/custom/kinkforme
             npm install
             npm run build
 

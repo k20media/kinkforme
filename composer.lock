@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "594813447f6e686c99803b93dd162347",
+    "content-hash": "713c0410aed03c4fb3cab90d2122bd59",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1668,6 +1668,66 @@
                 "source": "https://git.drupalcode.org/project/backup_migrate",
                 "issues": "https://www.drupal.org/project/issues/backup_migrate",
                 "slack": "https://drupal.slack.com/messages/C7C4M4QJV/details/"
+            }
+        },
+        {
+            "name": "drupal/belgrade",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/belgrade.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/belgrade-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "31ed7992e4a97cd2c44cdb1204ca2d437b840683"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1707913288",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "Centarro",
+                    "homepage": "https://www.drupal.org/user/3661446"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "majmunbog",
+                    "homepage": "https://www.drupal.org/user/2414528"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Belgrade theme for Drupal Commerce.",
+            "homepage": "https://drupal.org/project/belgrade",
+            "support": {
+                "source": "https://git.drupalcode.org/project/belgrade"
             }
         },
         {
@@ -4243,6 +4303,70 @@
             "homepage": "https://drupal.org/project/redirect_after_login",
             "support": {
                 "source": "https://git.drupalcode.org/project/redirect_after_login"
+            }
+        },
+        {
+            "name": "drupal/role_theme_switcher",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/role_theme_switcher.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/role_theme_switcher-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "360864a3c42b4daef3c261a22a539d7e26630d3d"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1655383703",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Julien Dubreuil",
+                    "homepage": "https://www.drupal.org/u/juliend",
+                    "email": "dubreuil.julien@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Pravin Ajaaz",
+                    "homepage": "https://www.drupal.org/user/2910049"
+                },
+                {
+                    "name": "tiutiun",
+                    "homepage": "https://www.drupal.org/user/158669"
+                }
+            ],
+            "description": "Assign a specific theme for different roles.",
+            "homepage": "https://www.drupal.org/project/role_theme_switcher",
+            "keywords": [
+                "Drupal",
+                "Theme"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/role_theme_switcher",
+                "issues": "https://www.drupal.org/project/issues/role_theme_switcher"
             }
         },
         {
