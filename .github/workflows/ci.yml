@@ -5,7 +5,6 @@ on: [push]
 env:
   PHP_VERSION: '8.2'
   NODE_VERSION: '16'
-  NEXT_JS_APP_PATH: 'next_commerce_api'
 
 jobs:
   build:
@@ -26,26 +25,14 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --prefer-dist
 
-      - name: Remove .ddev directory
-        run: rm -rf .ddev
-
-      - name: Setup Node.js Environment
+      - name: Install Node.js and NPM
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install Node.js dependencies
-        run: |
-          cd ${{ env.NEXT_JS_APP_PATH }}
-          npm install
+        run: npm install
 
-      - name: Build Vue.js application
-        run: |
-          cd ${{ env.NEXT_JS_APP_PATH }}
-          npm run build
+      - name: Build frontend assets
+        run: npm run build
 
-      # Optional: Lint Vue.js application
-      # - name: Lint Vue.js application
-      #   run: |
-      #     cd next_commerce_api
-      #     npm run lint
