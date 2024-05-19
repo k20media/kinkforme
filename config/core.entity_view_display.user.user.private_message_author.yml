@@ -1,0 +1,33 @@
+uuid: 20f8c0cc-47a2-48d2-8b33-503ec1db26aa
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.private_message_author
+    - field.field.user.user.field_adult_confirmation
+    - field.field.user.user.field_user_type
+    - field.field.user.user.user_picture
+  module:
+    - user
+_core:
+  default_config_hash: 5VkjdDDe_kM-giLC61z36ACn6Z2eMjaH63Rh6adWWpw
+id: user.user.private_message_author
+targetEntityType: user
+bundle: user
+mode: private_message_author
+content:
+  linked_username:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  buyer_profiles: true
+  customer_profiles: true
+  field_adult_confirmation: true
+  field_user_type: true
+  langcode: true
+  member_for: true
+  private_message_link: true
+  seller_profiles: true
+  user_picture: true

@@ -1,11 +1,11 @@
-uuid: 27b642b7-7676-441c-8d32-e7c644691b1b
+uuid: 3f8f261e-f41f-4697-aac8-9839b823162a
 langcode: en-gb
 status: true
 dependencies:
   config:
-    - node.type.listing
-id: node.listing
+    - node.type.article
+id: node.article
 target_entity_type_id: node
-target_bundle: listing
+target_bundle: article
 default_langcode: site_default
 language_alterable: false

@@ -1,0 +1,27 @@
+uuid: 0298f12e-a9c6-4047-a7a2-5aa33dd7d6c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social
+  module:
+    - system
+  theme:
+    - kinkforme
+_core:
+  default_config_hash: g99g62rc3EdAp80YVGX3aluRB8CQygs2OAbmpcCO16w
+id: kinkforme_social
+theme: kinkforme
+region: footer
+weight: -4
+provider: null
+plugin: 'system_menu_block:social'
+settings:
+  id: 'system_menu_block:social'
+  label: "Let's get social"
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

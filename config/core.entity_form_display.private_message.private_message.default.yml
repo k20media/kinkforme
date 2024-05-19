@@ -1,0 +1,28 @@
+uuid: 84036a77-ba54-4200-a6a8-a4ae353dbecb
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - private_message
+    - text
+_core:
+  default_config_hash: NgKTJ48tKixxHdgcHn2dYtLGAjd05npp8pylrqvU0lE
+id: private_message.private_message.default
+targetEntityType: private_message
+bundle: private_message
+mode: default
+content:
+  members:
+    weight: -100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: text_textarea
+    weight: null
+    region: content
+    settings:
+      rows: 5
+      placeholder: Message
+    third_party_settings: {  }
+hidden: {  }

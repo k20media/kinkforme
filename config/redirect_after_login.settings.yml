@@ -1,8 +1,8 @@
 login_redirection:
   anonymous: null
   authenticated: /
-  customer: /user
+  buyer: /
   seller: /user
-  content_editor: /admin/commerce
+  content_editor: /admin/content
   administrator: /admin/commerce
 exclude_urls: '/user/reset/*'

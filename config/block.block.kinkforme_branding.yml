@@ -1,0 +1,25 @@
+uuid: 13035acd-2d14-434b-b072-b63b61807a92
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kinkforme
+_core:
+  default_config_hash: 4qurdJx-vMbHayGbDpvQJWhRQNSI3sNUFLwn2eVpV34
+id: kinkforme_branding
+theme: kinkforme
+region: header
+weight: -9
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

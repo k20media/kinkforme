@@ -18,7 +18,6 @@
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/backup_migrate": "^5.0",
-        "drupal/belgrade": "^2.0",
         "drupal/captcha": "^2.0",
         "drupal/commerce": "^2.38",
         "drupal/commerce_api": "^1.0@RC",

@@ -15,7 +15,7 @@ definitions:
     expanded: false
     enabled: true
   user__page:
-    weight: -50
+    weight: -49
     menu_name: account
     parent: ''
     enabled: true

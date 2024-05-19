@@ -8,29 +8,9 @@ dependencies:
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
-    - field_group
     - image
     - options
     - user
-third_party_settings:
-  field_group:
-    group_membership:
-      children:
-        - field_user_type
-        - member_for
-      label: Membership
-      parent_name: ''
-      region: content
-      weight: 3
-      format_type: details
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        open: false
-        description: ''
-        required_fields: false
-        formatter: closed
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
 id: user.user.default
@@ -45,19 +25,24 @@ content:
       view_mode: default
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_user_type:
     type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   member_for:
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
+    region: content
+  private_message_link:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
   seller_profiles:
     type: entity_reference_entity_view
@@ -66,7 +51,7 @@ content:
       view_mode: default
       link: true
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   user_picture:
     type: image
@@ -83,3 +68,4 @@ hidden:
   customer_profiles: true
   field_adult_confirmation: true
   langcode: true
+  linked_username: true

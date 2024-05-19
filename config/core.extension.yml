@@ -28,10 +28,12 @@ module:
   commerce_store: 0
   commerce_user_roles: 0
   config: 0
+  consumers: 0
   contact: 0
   contextual: 0
   datetime: 0
   dblog: 0
+  decoupled_router: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
@@ -48,9 +50,6 @@ module:
   image: 0
   image_captcha: 0
   inline_entity_form: 0
-  jsonapi: 0
-  jsonapi_defaults: 0
-  jsonapi_extras: 0
   language: 0
   link: 0
   locale: 0
@@ -61,17 +60,23 @@ module:
   message: 0
   message_notify: 0
   mysql: 0
+  next: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
+  private_message: 0
+  private_message_notify: 0
   profile: 0
   redirect_after_login: 0
+  role_theme_switcher: 0
   search: 0
   serialization: 0
   shortcut: 0
+  simple_oauth: 0
   state_machine: 0
+  subrequests: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -86,4 +91,5 @@ module:
 theme:
   claro: 0
   gin: 0
+  kinkforme: 0
 profile: standard

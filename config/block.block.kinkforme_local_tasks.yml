@@ -1,0 +1,22 @@
+uuid: e4599e8e-bc0f-4051-ba0e-b8b373d02e2b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kinkforme
+_core:
+  default_config_hash: djJRL7P7Fenk0HNd-0aTnOMIhnTaaMidubRnIJ7c_Tc
+id: kinkforme_local_tasks
+theme: kinkforme
+region: content
+weight: -9
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: 9affefdb-cfde-4092-bdb1-27ce2bbd68a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kinkforme
+_core:
+  default_config_hash: NxK4vxfos1O0m65dphXeZ9xA4iyG1IQj1n6dMw7IhOM
+id: kinkforme_page_title
+theme: kinkforme
+region: content
+weight: -10
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/product/*\r\n/products*\r\n"
+    negate: true
+    context_mapping: {  }

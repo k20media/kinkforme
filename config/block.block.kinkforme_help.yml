@@ -1,0 +1,22 @@
+uuid: db070134-982f-424f-8f17-456f12d7d93f
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - kinkforme
+_core:
+  default_config_hash: MIhC0o5kSEnQSiRzgIaa8_TwXBcTbqvVw2km0VcJz4Q
+id: kinkforme_help
+theme: kinkforme
+region: content
+weight: -8
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

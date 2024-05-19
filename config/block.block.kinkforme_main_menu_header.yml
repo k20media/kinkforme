@@ -1,0 +1,27 @@
+uuid: d6a74a50-3ea0-4996-a4b1-a4b5ea18f627
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - kinkforme
+_core:
+  default_config_hash: j3R-a6S34vaQOtSP__uOqwt_DtidGSsujAQtRGFIflg
+id: kinkforme_main_menu_header
+theme: kinkforme
+region: header
+weight: -8
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation header'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - commerce_product
+    - private_message
     - profile
 id: seller
 label: Seller
@@ -17,10 +18,12 @@ permissions:
   - 'create underwear commerce_product'
   - 'delete own clothing commerce_product'
   - 'delete own fetish_items commerce_product'
+  - 'delete own private message'
   - 'delete own underwear commerce_product'
   - 'update own clothing commerce_product'
   - 'update own fetish_items commerce_product'
   - 'update own seller profile'
   - 'update own underwear commerce_product'
+  - 'use private messaging system'
   - 'view own seller profile'
   - 'view own unpublished commerce_product'

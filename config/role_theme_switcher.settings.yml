@@ -1,0 +1,25 @@
+roles:
+  anonymous:
+    theme: ''
+    weight: '0'
+    admin_theme: ''
+  authenticated:
+    theme: ''
+    weight: '0'
+    admin_theme: ''
+  buyer:
+    theme: ''
+    weight: '0'
+    admin_theme: kinkforme
+  seller:
+    theme: ''
+    weight: '0'
+    admin_theme: kinkforme
+  content_editor:
+    theme: ''
+    weight: '0'
+    admin_theme: gin
+  administrator:
+    theme: ''
+    weight: '0'
+    admin_theme: gin

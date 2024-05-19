@@ -1,0 +1,25 @@
+uuid: a0019355-f5ca-42ee-b682-4bb4082c05d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - kinkforme
+_core:
+  default_config_hash: 2Oie2pe83edxfvYT4t7wbGIzrVT7iRbCD2o4uYnc-ic
+id: kinkforme_shopping_cart
+theme: kinkforme
+region: top_bar
+weight: -10
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: 'Shopping Cart'
+  label_display: '0'
+  provider: commerce_cart
+  dropdown: true
+  show_if_empty: true
+  item_text: items
+visibility: {  }

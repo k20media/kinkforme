@@ -1,0 +1,22 @@
+uuid: 2ee2aac8-31d5-4777-8273-ab2342b37558
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kinkforme
+_core:
+  default_config_hash: MnzI9CSlj1tS3biIra8-K6aqQT0lO3D6kjIwG7-FUgE
+id: kinkforme_content
+theme: kinkforme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

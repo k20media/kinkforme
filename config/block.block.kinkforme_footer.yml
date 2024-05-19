@@ -1,0 +1,27 @@
+uuid: 019eed67-a23e-4cf0-af7a-fe866df84ac0
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - kinkforme
+_core:
+  default_config_hash: qrURKDZ2HCe5VTf2opF6fHKFV_AyBBml4mB9fPGpiek
+id: kinkforme_footer
+theme: kinkforme
+region: footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
