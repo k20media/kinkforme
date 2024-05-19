@@ -1,5 +1,5 @@
 uuid: f4daf2d4-9a33-4fd7-ae45-5bf14756cf88
-langcode: en
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -23,6 +23,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/checkout/*'
     negate: false
     context_mapping: {  }
+    pages: '/checkout/*'

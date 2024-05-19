@@ -41,6 +41,7 @@ hidden:
   langcode: true
   language: true
   path: true
+  private_messages: true
   seller_profiles: true
   timezone: true
   user_picture: true

@@ -1,5 +1,5 @@
 uuid: 9affefdb-cfde-4092-bdb1-27ce2bbd68a6
-langcode: en
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -22,6 +22,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "<front>\r\n/product/*\r\n/products*\r\n"
     negate: true
     context_mapping: {  }
+    pages: "<front>\r\n/product/*\r\n/products*\r\n"

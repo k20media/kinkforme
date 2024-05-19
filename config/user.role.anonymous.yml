@@ -5,7 +5,6 @@ dependencies:
   config:
     - filter.format.restricted_html
   module:
-    - comment
     - commerce_checkout
     - commerce_product
     - commerce_store
@@ -21,15 +20,18 @@ weight: -10
 is_admin: false
 permissions:
   - 'access checkout'
-  - 'access comments'
   - 'access content'
   - 'access user profiles'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view any buyer profile'
   - 'view any profile'
+  - 'view any seller profile'
   - 'view clothing commerce_product'
   - 'view commerce_product'
   - 'view fetish_items commerce_product'
   - 'view online commerce_store'
+  - 'view own buyer profile'
   - 'view own profile'
+  - 'view own seller profile'
   - 'view underwear commerce_product'

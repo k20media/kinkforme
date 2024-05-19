@@ -1,0 +1,32 @@
+uuid: 061dbddb-05e4-4c7b-812c-c27aa81d8d73
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - private_message
+    - user
+  theme:
+    - kinkforme
+id: kinkforme_privatemessageinbox
+theme: kinkforme
+region: top_bar
+weight: 0
+provider: null
+plugin: private_message_inbox_block
+settings:
+  id: private_message_inbox_block
+  label: 'Private Message Inbox'
+  label_display: '0'
+  provider: private_message
+  thread_count: 5
+  ajax_load_count: 5
+  ajax_refresh_rate: 15
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      buyer: buyer
+      seller: seller

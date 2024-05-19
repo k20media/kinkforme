@@ -1,5 +1,6 @@
 _core:
   default_config_hash: AST3VBXo_1SqDlnnv_7jUQS7gJGufbL6sWl2eUYCpUY
+langcode: en-gb
 inline_logo: 1
 fieldset_accordion: 0
 local_tasks_fixed: 1

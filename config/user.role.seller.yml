@@ -25,5 +25,8 @@ permissions:
   - 'update own seller profile'
   - 'update own underwear commerce_product'
   - 'use private messaging system'
+  - 'view any buyer profile'
+  - 'view any seller profile'
+  - 'view own buyer profile'
   - 'view own seller profile'
   - 'view own unpublished commerce_product'

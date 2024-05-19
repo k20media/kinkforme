@@ -4,11 +4,17 @@ status: true
 dependencies:
   module:
     - private_message
+    - profile
 id: buyer
 label: Buyer
 weight: -7
 is_admin: null
 permissions:
   - 'access user profiles'
+  - 'create buyer profile'
   - 'delete own private message'
+  - 'update own buyer profile'
   - 'use private messaging system'
+  - 'view any buyer profile'
+  - 'view any seller profile'
+  - 'view own buyer profile'

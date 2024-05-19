@@ -33,6 +33,7 @@ hidden:
   field_user_type: true
   langcode: true
   path: true
+  private_messages: true
   seller_profiles: true
   timezone: true
   user_picture: true
