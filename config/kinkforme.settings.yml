@@ -1,6 +1,15 @@
 _core:
   default_config_hash: AST3VBXo_1SqDlnnv_7jUQS7gJGufbL6sWl2eUYCpUY
 langcode: en-gb
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  use_default: true
 inline_logo: 1
 fieldset_accordion: 0
 local_tasks_fixed: 1
@@ -24,3 +33,13 @@ region_class_content: col
 region_class_sidebar_second: col-lg-3
 region_class_footer: 'bg-dark py-5 opacify-links text-white'
 region_container_footer: container-xl
+kinkforme_submit_button: 0
+toast_placement: top_left
+main_container_class: ''
+navigation_body_scrolling: 0
+navigation_backdrop: 0
+region_class_highlighted: ''
+region_class_help: ''
+region_container_help: ''
+region_container_content: ''
+region_container_sidebar_second: ''

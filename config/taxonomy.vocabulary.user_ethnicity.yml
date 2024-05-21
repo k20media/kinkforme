@@ -1,0 +1,8 @@
+uuid: 4d9fc1b5-28f4-44e8-b45a-0119e4a5bc2e
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'User Ethnicity'
+vid: user_ethnicity
+description: ''
+weight: 0

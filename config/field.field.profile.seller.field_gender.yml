@@ -1,0 +1,29 @@
+uuid: d7eacce0-545b-47c9-b3c5-7e13f565f866
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_gender
+    - profile.type.seller
+    - taxonomy.vocabulary.user_gender
+id: profile.seller.field_gender
+field_name: field_gender
+entity_type: profile
+bundle: seller
+label: Gender
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      user_gender: user_gender
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

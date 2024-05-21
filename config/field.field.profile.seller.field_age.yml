@@ -1,0 +1,29 @@
+uuid: 5249726f-3cd1-40b5-bfd5-df118d0ca941
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_age
+    - profile.type.seller
+    - taxonomy.vocabulary.user_age
+id: profile.seller.field_age
+field_name: field_age
+entity_type: profile
+bundle: seller
+label: Age
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      user_age: user_age
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

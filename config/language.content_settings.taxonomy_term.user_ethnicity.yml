@@ -1,0 +1,11 @@
+uuid: 839181b1-44c9-43ca-bb09-12d03f745e76
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.user_ethnicity
+id: taxonomy_term.user_ethnicity
+target_entity_type_id: taxonomy_term
+target_bundle: user_ethnicity
+default_langcode: site_default
+language_alterable: false

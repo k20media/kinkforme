@@ -1,0 +1,8 @@
+uuid: bc6df5c7-775b-4a06-965a-b04599336be4
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'User Shoe Size'
+vid: user_shoe_size
+description: ''
+weight: 0

@@ -3,18 +3,46 @@ langcode: en-gb
 status: true
 dependencies:
   config:
+    - field.field.profile.seller.field_age
     - field.field.profile.seller.field_bio
+    - field.field.profile.seller.field_gender
+    - field.field.profile.seller.field_shoe_size
     - profile.type.seller
 id: profile.seller.default
 targetEntityType: profile
 bundle: seller
 mode: default
 content:
+  field_age:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_bio:
     type: basic_string
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+  field_gender:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_shoe_size:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  private_message_link: true

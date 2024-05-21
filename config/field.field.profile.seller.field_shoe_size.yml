@@ -1,0 +1,29 @@
+uuid: 611306ac-0fe7-4b27-a9be-af6fc035629a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_shoe_size
+    - profile.type.seller
+    - taxonomy.vocabulary.user_shoe_size
+id: profile.seller.field_shoe_size
+field_name: field_shoe_size
+entity_type: profile
+bundle: seller
+label: 'Shoe Size'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      user_shoe_size: user_shoe_size
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,11 @@
+uuid: 196edfc5-4757-4a69-ba5b-841390d26b87
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.user_shoe_size
+id: taxonomy_term.user_shoe_size
+target_entity_type_id: taxonomy_term
+target_bundle: user_shoe_size
+default_langcode: site_default
+language_alterable: false

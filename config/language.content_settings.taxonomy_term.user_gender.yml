@@ -1,0 +1,11 @@
+uuid: e72007c2-2484-45eb-9324-f2ed778ca4af
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.user_gender
+id: taxonomy_term.user_gender
+target_entity_type_id: taxonomy_term
+target_bundle: user_gender
+default_langcode: site_default
+language_alterable: false
