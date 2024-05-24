@@ -3,29 +3,24 @@ langcode: en-gb
 status: true
 dependencies:
   config:
-    - field.field.profile.seller.field_age
     - field.field.profile.seller.field_bio
     - field.field.profile.seller.field_body_type
     - field.field.profile.seller.field_chest_size
+    - field.field.profile.seller.field_date_of_birth
     - field.field.profile.seller.field_ethnicity
     - field.field.profile.seller.field_eye_colour
     - field.field.profile.seller.field_gender
     - field.field.profile.seller.field_hair_colour
+    - field.field.profile.seller.field_occupation
     - field.field.profile.seller.field_shoe_size
     - profile.type.seller
+  module:
+    - age_field_formatter
 id: profile.seller.default
 targetEntityType: profile
 bundle: seller
 mode: default
 content:
-  field_age:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_bio:
     type: basic_string
     label: hidden
@@ -35,39 +30,49 @@ content:
     region: content
   field_body_type:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
-    weight: 8
+    weight: 7
     region: content
   field_chest_size:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
-    weight: 4
+    weight: 3
+    region: content
+  field_date_of_birth:
+    type: age_field_formatter
+    label: hidden
+    settings:
+      age_format: age_only
+      year_suffix: '1'
+      date_format: 'Y-m-d\TH:i:s'
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_ethnicity:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   field_eye_colour:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_gender:
     type: entity_reference_label
-    label: inline
+    label: hidden
     settings:
       link: false
     third_party_settings: {  }
@@ -75,19 +80,27 @@ content:
     region: content
   field_hair_colour:
     type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  field_shoe_size:
-    type: entity_reference_label
-    label: inline
+    label: hidden
     settings:
       link: false
     third_party_settings: {  }
-    weight: 3
+    weight: 6
+    region: content
+  field_occupation:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_shoe_size:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   private_message_link: true

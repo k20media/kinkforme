@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/age_field_formatter": "^3.0",
         "drupal/backup_migrate": "^5.0",
         "drupal/captcha": "^2.0",
         "drupal/chosen": "^4.0",

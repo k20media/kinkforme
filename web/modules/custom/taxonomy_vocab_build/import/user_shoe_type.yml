@@ -1,0 +1,10 @@
+vocab_name: "user_body_type"
+description: "A list of body types."
+terms:
+  - name: "Hourglass"
+  - name: "Curvy"
+  - name: "Athletic"
+  - name: "Slim"
+  - name: "Petite"
+  - name: "Plus Size"
+  - name: "Muscular"

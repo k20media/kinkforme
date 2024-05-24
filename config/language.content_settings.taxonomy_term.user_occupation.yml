@@ -1,0 +1,11 @@
+uuid: 5caf8ca6-385a-4aec-8257-578a5ee7c837
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.user_occupation
+id: taxonomy_term.user_occupation
+target_entity_type_id: taxonomy_term
+target_bundle: user_occupation
+default_langcode: site_default
+language_alterable: false

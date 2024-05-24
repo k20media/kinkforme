@@ -1,0 +1,8 @@
+uuid: ecffad7c-02b3-4851-b3c9-532bc87faa19
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'User Occupation'
+vid: user_occupation
+description: 'A comprehensive list of occupations.'
+weight: 0

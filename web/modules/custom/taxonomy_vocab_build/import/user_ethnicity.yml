@@ -1,0 +1,12 @@
+vocab_name: "user_ethnicity"
+description: "A generalized list of ethnic groupings."
+terms:
+  - name: "African"
+  - name: "Asian"
+  - name: "Black"
+  - name: "Caucasian"
+  - name: "Hispanic or Latino"
+  - name: "Middle Eastern"
+  - name: "Native American"
+  - name: "Pacific Islander"
+  - name: "Mixed or Multiple Ethnicities"

@@ -3,24 +3,27 @@ langcode: en-gb
 status: true
 dependencies:
   config:
-    - field.field.profile.seller.field_age
     - field.field.profile.seller.field_bio
     - field.field.profile.seller.field_body_type
     - field.field.profile.seller.field_chest_size
+    - field.field.profile.seller.field_date_of_birth
     - field.field.profile.seller.field_ethnicity
     - field.field.profile.seller.field_eye_colour
     - field.field.profile.seller.field_gender
     - field.field.profile.seller.field_hair_colour
+    - field.field.profile.seller.field_occupation
     - field.field.profile.seller.field_shoe_size
     - profile.type.seller
   module:
+    - datetime
     - field_group
 third_party_settings:
   field_group:
     group_basic_information:
       children:
+        - field_date_of_birth
         - field_gender
-        - field_age
+        - field_occupation
         - field_bio
       label: 'Basic Information'
       region: content
@@ -59,29 +62,27 @@ targetEntityType: profile
 bundle: seller
 mode: default
 content:
-  field_age:
-    type: options_select
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_bio:
     type: string_textarea
-    weight: 3
+    weight: 11
     region: content
     settings:
       rows: 20
       placeholder: ''
     third_party_settings: {  }
   field_body_type:
-    type: options_select
-    weight: 26
+    type: entity_reference_autocomplete
+    weight: 13
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_chest_size:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 10
     region: content
     settings:
       match_operator: CONTAINS
@@ -89,35 +90,71 @@ content:
       size: 5
       placeholder: ''
     third_party_settings: {  }
-  field_ethnicity:
-    type: options_select
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_eye_colour:
-    type: options_select
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_gender:
-    type: options_select
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_hair_colour:
-    type: options_select
-    weight: 11
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_shoe_size:
-    type: options_select
+  field_date_of_birth:
+    type: datetime_default
     weight: 8
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_ethnicity:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_eye_colour:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gender:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hair_colour:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_occupation:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_shoe_size:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
 hidden:
   is_default: true
