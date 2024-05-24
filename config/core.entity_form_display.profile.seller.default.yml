@@ -27,16 +27,17 @@ third_party_settings:
         - field_bio
       label: 'Basic Information'
       region: content
-      parent_name: ''
+      parent_name: group_profile
       weight: 1
-      format_type: details
+      format_type: tab
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        open: false
+        formatter: closed
         description: ''
         required_fields: true
+        open: false
     group_physical_characteristics:
       children:
         - field_ethnicity
@@ -47,16 +48,32 @@ third_party_settings:
         - field_body_type
       label: 'Physical Characteristics'
       region: content
-      parent_name: ''
+      parent_name: group_profile
       weight: 2
-      format_type: details
+      format_type: tab
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        open: false
+        formatter: closed
         description: ''
         required_fields: true
+        open: false
+    group_profile:
+      children:
+        - group_basic_information
+        - group_physical_characteristics
+      label: Profile
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
 id: profile.seller.default
 targetEntityType: profile
 bundle: seller

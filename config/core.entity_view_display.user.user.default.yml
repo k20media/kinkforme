@@ -29,7 +29,7 @@ content:
     region: content
   field_user_type:
     type: list_default
-    label: inline
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 4
