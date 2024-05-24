@@ -34,6 +34,7 @@ jobs:
             ./vendor/bin/drush cr
             ./vendor/bin/drush config:import -y
             ./vendor/bin/drush updatedb -y
+            ./vendor/bin/drush tvb-import
             ./vendor/bin/drush cr
 
             # Update and build theme

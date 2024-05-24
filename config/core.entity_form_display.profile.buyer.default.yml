@@ -1,0 +1,13 @@
+uuid: d0319a3d-103e-4470-96fe-ddca5aae9518
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - profile.type.buyer
+id: profile.buyer.default
+targetEntityType: profile
+bundle: buyer
+mode: default
+content: {  }
+hidden:
+  is_default: true

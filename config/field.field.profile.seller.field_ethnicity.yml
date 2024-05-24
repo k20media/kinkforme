@@ -1,0 +1,29 @@
+uuid: 533832e4-58b3-4069-bbae-a74a122e87a5
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_ethnicity
+    - profile.type.seller
+    - taxonomy.vocabulary.user_ethnicity
+id: profile.seller.field_ethnicity
+field_name: field_ethnicity
+entity_type: profile
+bundle: seller
+label: Ethnicity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      user_ethnicity: user_ethnicity
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

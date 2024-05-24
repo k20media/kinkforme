@@ -19,6 +19,7 @@
         "drupal/admin_toolbar": "^3.4",
         "drupal/backup_migrate": "^5.0",
         "drupal/captcha": "^2.0",
+        "drupal/chosen": "^4.0",
         "drupal/commerce": "^2.38",
         "drupal/commerce_api": "^1.0@RC",
         "drupal/commerce_checkout_order_fields": "^1.2",
@@ -43,6 +44,7 @@
         "drupal/redirect_after_login": "^3.0",
         "drupal/role_theme_switcher": "^1.2",
         "drupal/smtp": "^1.2",
+        "drupal/taxonomy_import": "^2.0",
         "drush/drush": "^12.5"
     },
     "conflict": {

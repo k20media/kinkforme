@@ -1,0 +1,29 @@
+uuid: 8fb86b07-e7db-419f-8de9-050aed7f4605
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_eye_colour
+    - profile.type.seller
+    - taxonomy.vocabulary.user_eye_colour
+id: profile.seller.field_eye_colour
+field_name: field_eye_colour
+entity_type: profile
+bundle: seller
+label: 'Eye Colour'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      user_eye_colour: user_eye_colour
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

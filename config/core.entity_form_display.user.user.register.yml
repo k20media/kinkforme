@@ -8,6 +8,7 @@ dependencies:
     - field.field.user.user.field_user_type
     - field.field.user.user.user_picture
   module:
+    - profile
     - user
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
@@ -20,6 +21,13 @@ content:
     weight: 0
     region: content
     settings: {  }
+    third_party_settings: {  }
+  customer_profiles:
+    type: profile_form
+    weight: 90
+    region: content
+    settings:
+      form_mode: default
     third_party_settings: {  }
   field_adult_confirmation:
     type: boolean_checkbox
@@ -37,7 +45,6 @@ content:
 hidden:
   buyer_profiles: true
   contact: true
-  customer_profiles: true
   langcode: true
   language: true
   path: true

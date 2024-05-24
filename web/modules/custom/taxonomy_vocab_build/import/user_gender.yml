@@ -1,0 +1,6 @@
+vocab_name: "user_gender"
+description: "A list of user eye genders."
+terms:
+  - name: "Male"
+  - name: "Female"
+  - name: "Trans"

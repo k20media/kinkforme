@@ -1,0 +1,11 @@
+uuid: a8754e1d-725f-4fe1-aabe-4be3184012ac
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.user_chest_size
+id: taxonomy_term.user_chest_size
+target_entity_type_id: taxonomy_term
+target_bundle: user_chest_size
+default_langcode: site_default
+language_alterable: false

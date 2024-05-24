@@ -1,0 +1,5 @@
+services:
+  taxonomy_vocab_build.commands:
+    class: Drupal\taxonomy_vocab_build\Commands\TaxonomyVocabBuildCommands
+    tags:
+      - { name: drush.command }

@@ -1,0 +1,9 @@
+vocab_name: "user_eye_colour"
+description: "A list of user eye colours."
+terms:
+  - name: "Blue"
+  - name: "Green"
+  - name: "Brown"
+  - name: "Hazel"
+  - name: "Amber"
+  - name: "Grey"

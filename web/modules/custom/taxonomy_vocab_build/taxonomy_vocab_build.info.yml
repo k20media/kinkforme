@@ -1,0 +1,7 @@
+name: 'Taxonomy Vocabulary Build'
+type: module
+description: 'Imports taxonomy vocabularies from YAML files.'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - drupal:taxonomy

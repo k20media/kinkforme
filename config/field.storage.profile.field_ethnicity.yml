@@ -1,0 +1,20 @@
+uuid: ccf8b5c3-f049-4862-8e1f-cc691cea6082
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - profile
+    - taxonomy
+id: profile.field_ethnicity
+field_name: field_ethnicity
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

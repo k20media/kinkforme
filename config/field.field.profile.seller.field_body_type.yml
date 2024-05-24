@@ -1,0 +1,29 @@
+uuid: 1950fda0-985b-4ad9-b1e5-9f2fdc032556
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_body_type
+    - profile.type.seller
+    - taxonomy.vocabulary.user_body_type
+id: profile.seller.field_body_type
+field_name: field_body_type
+entity_type: profile
+bundle: seller
+label: 'Body Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      user_body_type: user_body_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

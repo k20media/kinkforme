@@ -1,0 +1,11 @@
+uuid: b8688ee3-40c7-4c33-9424-00fa8931b8c1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.user_eye_colour
+id: taxonomy_term.user_eye_colour
+target_entity_type_id: taxonomy_term
+target_bundle: user_eye_colour
+default_langcode: site_default
+language_alterable: false

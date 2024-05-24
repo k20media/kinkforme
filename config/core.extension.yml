@@ -14,6 +14,8 @@ module:
   block_content: 0
   breakpoint: 0
   captcha: 0
+  chosen: 0
+  chosen_lib: 0
   ckeditor5: 0
   comment: 0
   commerce: 0
@@ -80,6 +82,8 @@ module:
   subrequests: 0
   system: 0
   taxonomy: 0
+  taxonomy_import: 0
+  taxonomy_vocab_build: 0
   text: 0
   token: 0
   toolbar: 0

@@ -6,7 +6,7 @@ third_party_settings:
   commerce_order:
     customer_profile_type: false
 id: buyer
-label: Buyer
+label: 'Buyer Profile'
 display_label: 'User Profile'
 multiple: false
 registration: false

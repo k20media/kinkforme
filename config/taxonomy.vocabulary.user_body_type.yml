@@ -1,0 +1,8 @@
+uuid: b8312e45-5b3c-4cdb-8a2f-775bcd1528ce
+langcode: en-gb
+status: true
+dependencies: {  }
+name: 'User Body Type'
+vid: user_body_type
+description: ''
+weight: 0

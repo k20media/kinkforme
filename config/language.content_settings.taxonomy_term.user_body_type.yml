@@ -1,11 +1,11 @@
-uuid: 67686d67-53e3-4078-9b3d-ddb7eea14c1b
+uuid: 3dd3f964-f6bd-41ae-b310-d2babb06f182
 langcode: en-gb
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.user_body_size
-id: taxonomy_term.user_body_size
+    - taxonomy.vocabulary.user_body_type
+id: taxonomy_term.user_body_type
 target_entity_type_id: taxonomy_term
-target_bundle: user_body_size
+target_bundle: user_body_type
 default_langcode: site_default
 language_alterable: false

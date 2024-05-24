@@ -1,0 +1,13 @@
+uuid: 64cce6cd-fd03-4bbb-8298-e4a9f016bf96
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - profile.type.buyer
+id: profile.buyer.default
+targetEntityType: profile
+bundle: buyer
+mode: default
+content: {  }
+hidden:
+  private_message_link: true
