@@ -6,7 +6,6 @@ dependencies:
     - filter.format.basic_html
   module:
     - commerce_checkout
-    - commerce_order
     - commerce_product
     - commerce_store
     - file
@@ -37,7 +36,6 @@ permissions:
   - 'view fetish_items commerce_product'
   - 'view online commerce_store'
   - 'view own buyer profile'
-  - 'view own commerce_order'
   - 'view own profile'
   - 'view own seller profile'
   - 'view underwear commerce_product'

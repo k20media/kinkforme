@@ -7,7 +7,7 @@ third_party_settings:
     customer_profile_type: false
 id: buyer
 label: 'Buyer Profile'
-display_label: 'User Profile'
+display_label: 'Buyer Profile'
 multiple: false
 registration: false
 roles:

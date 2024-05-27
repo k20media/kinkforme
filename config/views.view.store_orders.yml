@@ -981,7 +981,6 @@ display:
         title: Orders
         description: 'Manage your orders.'
         weight: 0
-      use_admin_theme: true
     cache_metadata:
       max-age: 0
       contexts:

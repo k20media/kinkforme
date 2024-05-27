@@ -63,7 +63,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -73,7 +73,8 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings: {  }
+          settings:
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -134,18 +135,22 @@ display:
           expose:
             operator: ''
       style:
-        type: grid_responsive
+        type: html_list
         options:
+          row_class: ''
+          default_row_class: true
           uses_fields: false
-          columns: 4
-          cell_min_width: 100
-          grid_gutter: 10
-          alignment: horizontal
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
-        type: 'entity:commerce_product'
+        type: fields
         options:
-          relationship: none
-          view_mode: default
+          default_field_elements: true
+          inline:
+            title: title
+          separator: ''
+          hide_empty: false
       query:
         type: views_query
         options:

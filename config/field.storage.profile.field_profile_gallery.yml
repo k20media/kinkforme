@@ -1,0 +1,30 @@
+uuid: 5b55a979-957a-4df1-ae32-ea59ca28ce61
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - profile
+id: profile.field_profile_gallery
+field_name: field_profile_gallery
+entity_type: profile
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+module: image
+locked: false
+cardinality: 20
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

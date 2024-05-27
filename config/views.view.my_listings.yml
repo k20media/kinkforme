@@ -1,15 +1,17 @@
-uuid: 92ce230a-ecae-4a53-b5d7-62830c937371
+uuid: 2b2f52ab-2392-4e7b-8e28-8c98b31a0cee
 langcode: en-gb
 status: true
 dependencies:
+  config:
+    - system.menu.account
   module:
     - commerce
     - commerce_product
     - user
 _core:
   default_config_hash: tu0PL5GIB4nIjUfFst2N0WsTO6Ju1WtX7lFr-ya9vAs
-id: store_products
-label: 'Store Products'
+id: my_listings
+label: 'My Listings'
 module: views
 description: ''
 tag: Commerce
@@ -22,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'My Products'
+      title: 'My Listings'
       fields:
         commerce_product_bulk_form:
           id: commerce_product_bulk_form
@@ -654,14 +656,23 @@ display:
         - user.permissions
       tags: {  }
       cacheable: false
-  page_1:
-    id: page_1
+  my_listings_page:
+    id: my_listings_page
     display_title: Page
     display_plugin: page
     position: 1
     display_options:
       display_extenders: {  }
-      path: store/products
+      path: store/listings
+      menu:
+        type: normal
+        title: 'My Listings'
+        description: ''
+        weight: -48
+        expanded: false
+        menu_name: account
+        parent: ''
+        context: '0'
     cache_metadata:
       max-age: 0
       contexts:

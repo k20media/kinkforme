@@ -265,7 +265,6 @@ display:
     display_options:
       display_extenders: {  }
       path: members
-      use_admin_theme: true
     cache_metadata:
       max-age: -1
       contexts:

@@ -17,7 +17,7 @@ font_set: raleway
 kinkforme_icons: 1
 product_teaser: kinkforme
 message_type: alerts
-main_container: container-xl
+main_container: container-xxl
 navigation_toggle_text: Menu
 navigation_logo: 1
 navigation_position: start
@@ -37,9 +37,9 @@ kinkforme_submit_button: 0
 toast_placement: top_left
 main_container_class: ''
 navigation_body_scrolling: 0
-navigation_backdrop: 0
+navigation_backdrop: 1
 region_class_highlighted: ''
 region_class_help: ''
 region_container_help: ''
-region_container_content: ''
+region_container_content: container-xxl
 region_container_sidebar_second: ''

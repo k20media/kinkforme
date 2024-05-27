@@ -12,11 +12,14 @@ dependencies:
     - field.field.profile.seller.field_gender
     - field.field.profile.seller.field_hair_colour
     - field.field.profile.seller.field_occupation
+    - field.field.profile.seller.field_profile_gallery
     - field.field.profile.seller.field_shoe_size
+    - image.style.large
     - profile.type.seller
   module:
     - datetime
     - field_group
+    - image
 third_party_settings:
   field_group:
     group_basic_information:
@@ -34,10 +37,9 @@ third_party_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        formatter: closed
+        formatter: open
         description: ''
         required_fields: true
-        open: false
     group_physical_characteristics:
       children:
         - field_ethnicity
@@ -49,7 +51,7 @@ third_party_settings:
       label: 'Physical Characteristics'
       region: content
       parent_name: group_profile
-      weight: 2
+      weight: 3
       format_type: tab
       format_settings:
         classes: ''
@@ -62,6 +64,7 @@ third_party_settings:
     group_profile:
       children:
         - group_basic_information
+        - group_image_gallery
         - group_physical_characteristics
       label: Profile
       region: content
@@ -74,6 +77,21 @@ third_party_settings:
         id: ''
         direction: horizontal
         width_breakpoint: 640
+    group_image_gallery:
+      children:
+        - field_profile_gallery
+      label: Images
+      region: content
+      parent_name: group_profile
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
 id: profile.seller.default
 targetEntityType: profile
 bundle: seller
@@ -159,9 +177,17 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_profile_gallery:
+    type: image_image
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: bar
+      preview_image_style: large
+    third_party_settings: {  }
   field_shoe_size:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS

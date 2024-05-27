@@ -7,12 +7,12 @@ dependencies:
 id: products
 label: Products
 type: 'canonical_entities:commerce_product'
-pattern: '[commerce_product:uid:entity:account-name]/listings/[commerce_product:type]/[commerce_product:title:value]'
+pattern: '/members/[commerce_product:uid:entity:account-name]/listings/[commerce_product:type]/[commerce_product:title:value]'
 selection_criteria:
-  5510443e-6bda-43e9-8184-4de4daece064:
+  ec775aa8-4437-4264-a40b-a0112d842188:
     id: 'entity_bundle:commerce_product'
     negate: false
-    uuid: 5510443e-6bda-43e9-8184-4de4daece064
+    uuid: ec775aa8-4437-4264-a40b-a0112d842188
     context_mapping:
       commerce_product: commerce_product
     bundles:

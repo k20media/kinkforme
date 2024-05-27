@@ -15,13 +15,13 @@ definitions:
     expanded: false
     enabled: true
   user__page:
-    weight: -49
+    weight: -47
     menu_name: account
     parent: ''
     enabled: true
     expanded: false
   user__logout:
-    weight: -45
+    weight: -46
     menu_name: account
     parent: ''
     expanded: false
